@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xixi.local/schemas/envelope.schema.json",
+  "title": "XiXi Protocol Envelope",
+  "type": "object",
+  "required": [
+    "protocol",
+    "id",
+    "type",
+    "timestamp",
+    "session_id",
+    "trace_id",
+    "source",
+    "target",
+    "sequence",
+    "payload"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "protocol": {
+      "const": "xixi/1.0"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^msg_[A-Za-z0-9_-]{8,}$"
+    },
+    "type": {
+      "enum": [
+        "session.hello",
+        "session.ready",
+        "user.input",
+        "user.interrupt",
+        "assistant.stream.start",
+        "assistant.stream.delta",
+        "assistant.stream.complete",
+        "assistant.stream.interrupted",
+        "soul.turn.request",
+        "soul.turn.output",
+        "memory.apply.request",
+        "memory.apply.result",
+        "tool.execute.request",
+        "permission.request",
+        "permission.response",
+        "tool.execute.result",
+        "ui.mode.set",
+        "body.intent.set",
+        "body.status",
+        "model.status",
+        "task.status",
+        "system.error"
+      ]
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "session_id": {
+      "type": "string",
+      "pattern": "^ses_[A-Za-z0-9_-]{8,}$"
+    },
+    "trace_id": {
+      "type": "string",
+      "pattern": "^trc_[A-Za-z0-9_-]{8,}$"
+    },
+    "reply_to": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^msg_[A-Za-z0-9_-]{8,}$"
+    },
+    "source": {
+      "enum": [
+        "ui",
+        "container",
+        "soul",
+        "body",
+        "tool",
+        "model",
+        "system"
+      ]
+    },
+    "target": {
+      "enum": [
+        "ui",
+        "container",
+        "soul",
+        "body",
+        "tool",
+        "model",
+        "system"
+      ]
+    },
+    "sequence": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "ack_required": {
+      "type": "boolean",
+      "default": false
+    },
+    "replay_safe": {
+      "type": "boolean",
+      "default": false
+    },
+    "payload": {
+      "type": "object"
+    }
+  }
+}

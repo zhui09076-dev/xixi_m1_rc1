@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xixi.local/schemas/payloads/soul.turn.output.schema.json",
+  "title": "soul.turn.output",
+  "$ref": "../imported/soul/runtime_output.schema.json"
+}

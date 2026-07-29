@@ -1,0 +1,38 @@
+{
+  "packageType": "xixi-interface-protocol",
+  "packageId": "xixi-interface-main",
+  "version": "0.9.0-rc1",
+  "protocol": "xixi/1.0",
+  "status": "release-candidate",
+  "language": "zh-CN",
+  "transport": {
+    "primary": "local-websocket-json",
+    "endpoint": "ws://127.0.0.1:17861/v1/ws",
+    "health": "http://127.0.0.1:17861/v1/health",
+    "frame": "one-json-object-per-text-frame"
+  },
+  "compatiblePackages": {
+    "soul": {
+      "packageId": "xixi-soul-main",
+      "version": "0.9.0-rc1",
+      "sha256": "2f941db9d09631ba921320f481cf8a58f9bb3dacdc4fcac7038356516118de17"
+    },
+    "ui": {
+      "packageId": "xixi-ui-main",
+      "version": "0.9.0-rc1",
+      "sha256": "d4927f6ae1dbe9f1118c404362c73f2fb85a07cab7f49a040f0f012be895cc0b"
+    },
+    "body": {
+      "minimumVersion": "0.1.0",
+      "requiredForProtocolImplementation": false,
+      "contract": "semantic-intent-only"
+    }
+  },
+  "entry": {
+    "spec": "docs/SPEC.md",
+    "transport": "docs/TRANSPORT.md",
+    "ownership": "docs/OWNERSHIP.md",
+    "catalog": "MESSAGE_CATALOG.json",
+    "baseEnvelopeSchema": "schemas/envelope.schema.json"
+  }
+}

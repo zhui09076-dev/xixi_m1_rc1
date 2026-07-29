@@ -1,0 +1,21 @@
+{
+  "states": [
+    "hidden",
+    "ordinary",
+    "scoped",
+    "outbound_private",
+    "irreversible"
+  ],
+  "actions": [
+    "allow_once",
+    "allow_scope",
+    "cancel"
+  ],
+  "requiredFields": [
+    "operation",
+    "target",
+    "scope",
+    "risk",
+    "reason"
+  ]
+}

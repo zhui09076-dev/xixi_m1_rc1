@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xixi.local/schemas/messages/body.intent.set.schema.json",
+  "title": "XiXi Message: body.intent.set",
+  "allOf": [
+    {
+      "$ref": "../envelope.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "body.intent.set"
+        },
+        "source": {
+          "const": "container"
+        },
+        "target": {
+          "const": "body"
+        },
+        "ack_required": {
+          "const": false
+        },
+        "payload": {
+          "$ref": "../payloads/body.intent.set.schema.json"
+        }
+      }
+    }
+  ]
+}

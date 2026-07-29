@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xixi.local/schemas/messages/assistant.stream.delta.schema.json",
+  "title": "XiXi Message: assistant.stream.delta",
+  "allOf": [
+    {
+      "$ref": "../envelope.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "assistant.stream.delta"
+        },
+        "source": {
+          "const": "container"
+        },
+        "target": {
+          "const": "ui"
+        },
+        "ack_required": {
+          "const": false
+        },
+        "payload": {
+          "$ref": "../payloads/assistant.stream.delta.schema.json"
+        }
+      }
+    }
+  ]
+}

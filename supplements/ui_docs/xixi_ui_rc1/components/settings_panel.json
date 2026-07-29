@@ -1,0 +1,9 @@
+{
+  "sections": [
+    "appearance",
+    "initiative",
+    "memory",
+    "permissions",
+    "startup"
+  ]
+}

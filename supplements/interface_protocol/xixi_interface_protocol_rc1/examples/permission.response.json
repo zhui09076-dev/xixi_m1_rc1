@@ -1,0 +1,24 @@
+{
+  "protocol": "xixi/1.0",
+  "id": "msg_example_007",
+  "type": "permission.response",
+  "timestamp": "2026-07-30T01:07:00+08:00",
+  "session_id": "ses_example_001",
+  "trace_id": "trc_example_001",
+  "reply_to": null,
+  "source": "ui",
+  "target": "container",
+  "sequence": 7,
+  "ack_required": true,
+  "replay_safe": false,
+  "payload": {
+    "permission_id": "perm_example_001",
+    "decision": "allow_once",
+    "scope_override": {
+      "attachment_ids": [
+        "att_example_001"
+      ]
+    },
+    "user_note": null
+  }
+}

@@ -1,0 +1,45 @@
+:root {
+  color-scheme: dark;
+
+  --ui-font: "Segoe UI Variable", "Microsoft YaHei UI", "PingFang SC", sans-serif;
+
+  --bg-deep: #0b1117;
+  --bg-mid: #131c25;
+  --bg-warm: #241d1a;
+
+  --glass-strong: rgba(18, 24, 31, 0.78);
+  --glass-medium: rgba(22, 29, 37, 0.64);
+  --glass-soft: rgba(28, 35, 43, 0.42);
+  --glass-hover: rgba(255, 255, 255, 0.08);
+
+  --line-strong: rgba(255, 255, 255, 0.18);
+  --line-soft: rgba(255, 255, 255, 0.09);
+
+  --text-main: #f4f1ec;
+  --text-secondary: #b7bdc6;
+  --text-muted: #7f8995;
+
+  --accent-warm: #d7a06b;
+  --accent-warm-soft: rgba(215, 160, 107, 0.18);
+  --accent-cool: #88abc4;
+  --accent-cool-soft: rgba(136, 171, 196, 0.16);
+
+  --success: #7db58a;
+  --warning: #d2aa65;
+  --danger: #d37373;
+
+  --radius-xs: 8px;
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  --shadow-panel: 0 28px 80px rgba(0, 0, 0, 0.38);
+  --shadow-soft: 0 14px 45px rgba(0, 0, 0, 0.24);
+
+  --blur-panel: 28px;
+  --blur-strong: 42px;
+
+  --ease-out: cubic-bezier(.22, 1, .36, 1);
+  --ease-inout: cubic-bezier(.65, 0, .35, 1);
+}

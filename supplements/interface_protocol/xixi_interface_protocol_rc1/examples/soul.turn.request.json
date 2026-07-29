@@ -1,0 +1,40 @@
+{
+  "protocol": "xixi/1.0",
+  "id": "msg_example_004",
+  "type": "soul.turn.request",
+  "timestamp": "2026-07-30T01:04:00+08:00",
+  "session_id": "ses_example_001",
+  "trace_id": "trc_example_001",
+  "reply_to": null,
+  "source": "container",
+  "target": "soul",
+  "sequence": 4,
+  "ack_required": true,
+  "replay_safe": false,
+  "payload": {
+    "turn_id": "turn_example_001",
+    "identity_id": "xixi-main",
+    "messages": [
+      {
+        "role": "user",
+        "content": "把项目源代码发给在线模型分析。"
+      }
+    ],
+    "context": {
+      "project_ids": [
+        "project_xixi"
+      ],
+      "memory_ids": [
+        "mem_division_001"
+      ],
+      "permission_snapshot": [
+        "filesystem:C:/Users/99678/projects/xixi:read"
+      ],
+      "attention": {
+        "primary_task_id": null,
+        "light_task_id": null
+      }
+    },
+    "runtime_contract_version": "1.0.0"
+  }
+}

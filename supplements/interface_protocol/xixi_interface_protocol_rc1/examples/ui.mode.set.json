@@ -1,0 +1,20 @@
+{
+  "protocol": "xixi/1.0",
+  "id": "msg_example_017",
+  "type": "ui.mode.set",
+  "timestamp": "2026-07-30T01:17:00+08:00",
+  "session_id": "ses_example_001",
+  "trace_id": "trc_example_001",
+  "reply_to": null,
+  "source": "container",
+  "target": "ui",
+  "sequence": 17,
+  "ack_required": false,
+  "replay_safe": false,
+  "payload": {
+    "mode": "permission",
+    "reason": "等待私人外发确认",
+    "panel": "permission_dialog",
+    "focus": "allow_once"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "packageType": "xixi-soul",
+  "packageId": "xixi-soul-main",
+  "version": "0.9.0-rc1",
+  "schemaVersion": "1.0.0",
+  "language": "zh-CN",
+  "encoding": "UTF-8",
+  "status": "release-candidate",
+  "entry": {
+    "identity": "identity.yaml",
+    "constitution": "constitution.yaml",
+    "personality": "personality.yaml",
+    "conversation": "conversation.yaml",
+    "memoryPolicy": "memory_policy.yaml",
+    "autonomy": "autonomy.yaml",
+    "states": "states.yaml",
+    "bodyIntentMapping": "state_to_body.yaml",
+    "systemPrompt": "prompt_templates/system_base.txt",
+    "contextPolicy": "prompt_templates/context_policy.yaml",
+    "runtimeOutputInstructions": "prompt_templates/runtime_output_instructions.txt",
+    "runtimeSchema": "schemas/runtime_output.schema.json"
+  },
+  "compatibility": {
+    "minimumContainerVersion": "0.1.0",
+    "llmProviderAgnostic": true,
+    "localModelSupported": true,
+    "onlineModelSupported": true,
+    "preferredContextMode": "dynamic",
+    "minimumRecommendedContextTokens": 32768
+  },
+  "persistence": {
+    "identityLivesOutsideModel": true,
+    "preserveMemoryAcrossModelSwitch": true,
+    "preserveRelationshipAcrossBodySwitch": true,
+    "preserveProjectsAcrossSoulUpgrade": true,
+    "rollbackRequired": true
+  },
+  "securityBoundary": {
+    "soulMayProposeActions": true,
+    "soulMayExecuteSystemActionsDirectly": false,
+    "containerPermissionGatewayRequired": true
+  }
+}

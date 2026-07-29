@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xixi.local/schemas/payloads/user.interrupt.schema.json",
+  "title": "user.interrupt",
+  "type": "object",
+  "required": [
+    "turn_id",
+    "scope",
+    "reason"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "turn_id": {
+      "type": "string"
+    },
+    "scope": {
+      "enum": [
+        "generation",
+        "speech",
+        "tool",
+        "task",
+        "all"
+      ]
+    },
+    "reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

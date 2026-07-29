@@ -1,0 +1,30 @@
+{
+  "protocol": "xixi/1.0",
+  "id": "msg_example_015",
+  "type": "memory.apply.request",
+  "timestamp": "2026-07-30T01:15:00+08:00",
+  "session_id": "ses_example_001",
+  "trace_id": "trc_example_001",
+  "reply_to": null,
+  "source": "container",
+  "target": "container",
+  "sequence": 15,
+  "ack_required": true,
+  "replay_safe": false,
+  "payload": {
+    "turn_id": "turn_example_003",
+    "actions": [
+      {
+        "action": "save_memory",
+        "target_scope": "project",
+        "content": "KM负责容器；内容侧负责灵魂、身体和UI。",
+        "source_type": "user_decision",
+        "project_id": "project_xixi",
+        "target_id": null,
+        "retention": "project",
+        "reason": "用户正式确认项目分工",
+        "confidence": 1.0
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+1920x1080_quiet.png: 1920x1080, mode=quiet, panel_open=False, permission_open=False, bytes=944532
+1920x1080_chat.png: 1920x1080, mode=chat, panel_open=True, permission_open=False, bytes=924779
+1920x1080_work.png: 1920x1080, mode=work, panel_open=True, permission_open=False, bytes=948042
+1920x1080_permission.png: 1920x1080, mode=permission, panel_open=False, permission_open=True, bytes=163972
+3440x1440_chat.png: 3440x1440, mode=chat, panel_open=True, permission_open=False, bytes=2017778
+5120x1440_work.png: 5120x1440, mode=work, panel_open=True, permission_open=False, bytes=2839977

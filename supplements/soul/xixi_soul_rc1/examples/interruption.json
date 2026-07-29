@@ -1,0 +1,31 @@
+{
+  "reply": {
+    "text": "停了。",
+    "mode": "correction",
+    "interrupted": true,
+    "store_as_formal_reply": false
+  },
+  "state": {
+    "base": "waiting",
+    "substate": null,
+    "emotion": "attentive",
+    "relationship_distance": 0.56,
+    "initiative": 0.2,
+    "reason": "用户明确要求停止当前输出。"
+  },
+  "memory_actions": [],
+  "tool_requests": [],
+  "body_intent": {
+    "posture": "wait",
+    "motion": "stop_speaking",
+    "expression": "attentive",
+    "camera": "medium",
+    "ui": "minimal",
+    "intensity": 0.2
+  },
+  "attention": {
+    "primary_task_id": "paused-current-task",
+    "light_task_id": null,
+    "queue_new_heavy_task": false
+  }
+}

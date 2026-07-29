@@ -1,0 +1,30 @@
+{
+  "protocol": "xixi/1.0",
+  "id": "msg_example_018",
+  "type": "body.intent.set",
+  "timestamp": "2026-07-30T01:18:00+08:00",
+  "session_id": "ses_example_001",
+  "trace_id": "trc_example_001",
+  "reply_to": null,
+  "source": "container",
+  "target": "body",
+  "sequence": 18,
+  "ack_required": false,
+  "replay_safe": false,
+  "payload": {
+    "turn_id": "turn_example_001",
+    "state": "waiting",
+    "intent": {
+      "posture": "waiting",
+      "motion": "idle_breathing",
+      "expression": "attentive_neutral",
+      "camera": "medium",
+      "ui": "permission",
+      "intensity": 0.45
+    },
+    "transition": {
+      "duration_ms": 280,
+      "interruptible": true
+    }
+  }
+}

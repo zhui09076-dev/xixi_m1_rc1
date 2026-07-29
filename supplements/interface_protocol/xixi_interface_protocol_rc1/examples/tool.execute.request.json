@@ -1,0 +1,31 @@
+{
+  "protocol": "xixi/1.0",
+  "id": "msg_example_008",
+  "type": "tool.execute.request",
+  "timestamp": "2026-07-30T01:08:00+08:00",
+  "session_id": "ses_example_001",
+  "trace_id": "trc_example_001",
+  "reply_to": null,
+  "source": "container",
+  "target": "tool",
+  "sequence": 8,
+  "ack_required": true,
+  "replay_safe": false,
+  "payload": {
+    "turn_id": "turn_example_001",
+    "request_id": "toolreq_example_001",
+    "tool_request": {
+      "capability": "online_model",
+      "operation": "analyze_files",
+      "target": "external-model",
+      "input": {
+        "attachment_ids": [
+          "att_example_001"
+        ]
+      },
+      "risk": "outbound_private",
+      "reason": "用户已仅本次授权"
+    },
+    "permission_state": "granted_once"
+  }
+}

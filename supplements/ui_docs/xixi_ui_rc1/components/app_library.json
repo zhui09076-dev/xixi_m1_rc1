@@ -1,0 +1,17 @@
+{
+  "defaultState": "collapsed",
+  "states": [
+    "collapsed",
+    "expanded",
+    "searching"
+  ],
+  "apps": [
+    "chat",
+    "quick_note",
+    "todo",
+    "project",
+    "model",
+    "settings"
+  ],
+  "interaction": "single_active_panel"
+}

@@ -1,0 +1,156 @@
+[
+  {
+    "type": "session.hello",
+    "source": "ui",
+    "target": "container",
+    "direction": "client->server",
+    "ack": true
+  },
+  {
+    "type": "session.ready",
+    "source": "container",
+    "target": "ui",
+    "direction": "server->client",
+    "ack": false
+  },
+  {
+    "type": "user.input",
+    "source": "ui",
+    "target": "container",
+    "direction": "client->server",
+    "ack": true
+  },
+  {
+    "type": "user.interrupt",
+    "source": "ui",
+    "target": "container",
+    "direction": "client->server",
+    "ack": true
+  },
+  {
+    "type": "assistant.stream.start",
+    "source": "container",
+    "target": "ui",
+    "direction": "server->client",
+    "ack": false
+  },
+  {
+    "type": "assistant.stream.delta",
+    "source": "container",
+    "target": "ui",
+    "direction": "server->client",
+    "ack": false
+  },
+  {
+    "type": "assistant.stream.complete",
+    "source": "container",
+    "target": "ui",
+    "direction": "server->client",
+    "ack": false
+  },
+  {
+    "type": "assistant.stream.interrupted",
+    "source": "container",
+    "target": "ui",
+    "direction": "server->client",
+    "ack": false
+  },
+  {
+    "type": "soul.turn.request",
+    "source": "container",
+    "target": "soul",
+    "direction": "internal",
+    "ack": true
+  },
+  {
+    "type": "soul.turn.output",
+    "source": "soul",
+    "target": "container",
+    "direction": "internal",
+    "ack": false
+  },
+  {
+    "type": "memory.apply.request",
+    "source": "container",
+    "target": "container",
+    "direction": "internal",
+    "ack": true
+  },
+  {
+    "type": "memory.apply.result",
+    "source": "container",
+    "target": "soul",
+    "direction": "internal",
+    "ack": false
+  },
+  {
+    "type": "tool.execute.request",
+    "source": "container",
+    "target": "tool",
+    "direction": "internal",
+    "ack": true
+  },
+  {
+    "type": "permission.request",
+    "source": "container",
+    "target": "ui",
+    "direction": "server->client",
+    "ack": true
+  },
+  {
+    "type": "permission.response",
+    "source": "ui",
+    "target": "container",
+    "direction": "client->server",
+    "ack": true
+  },
+  {
+    "type": "tool.execute.result",
+    "source": "tool",
+    "target": "container",
+    "direction": "internal",
+    "ack": false
+  },
+  {
+    "type": "ui.mode.set",
+    "source": "container",
+    "target": "ui",
+    "direction": "server->client",
+    "ack": false
+  },
+  {
+    "type": "body.intent.set",
+    "source": "container",
+    "target": "body",
+    "direction": "internal",
+    "ack": false
+  },
+  {
+    "type": "body.status",
+    "source": "body",
+    "target": "container",
+    "direction": "internal",
+    "ack": false
+  },
+  {
+    "type": "model.status",
+    "source": "model",
+    "target": "container",
+    "direction": "internal",
+    "ack": false
+  },
+  {
+    "type": "task.status",
+    "source": "container",
+    "target": "ui",
+    "direction": "server->client",
+    "ack": false
+  },
+  {
+    "type": "system.error",
+    "source": "container",
+    "target": "ui",
+    "direction": "server->client",
+    "ack": false
+  }
+]

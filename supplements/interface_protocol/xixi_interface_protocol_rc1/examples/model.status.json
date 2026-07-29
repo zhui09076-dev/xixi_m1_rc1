@@ -1,0 +1,23 @@
+{
+  "protocol": "xixi/1.0",
+  "id": "msg_example_020",
+  "type": "model.status",
+  "timestamp": "2026-07-30T01:20:00+08:00",
+  "session_id": "ses_example_001",
+  "trace_id": "trc_example_001",
+  "reply_to": null,
+  "source": "model",
+  "target": "container",
+  "sequence": 20,
+  "ack_required": false,
+  "replay_safe": false,
+  "payload": {
+    "provider": "ollama",
+    "model": "richardyoung/qwen3.6-27b-abliterated:latest",
+    "status": "ready",
+    "context_tokens": 65536,
+    "local": true,
+    "vram_used_mb": 21840,
+    "error": null
+  }
+}

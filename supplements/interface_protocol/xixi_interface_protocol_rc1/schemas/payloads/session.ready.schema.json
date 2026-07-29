@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xixi.local/schemas/payloads/session.ready.schema.json",
+  "title": "session.ready",
+  "type": "object",
+  "required": [
+    "selected_protocol",
+    "server_version",
+    "identity_id",
+    "features",
+    "limits"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "selected_protocol": {
+      "const": "xixi/1.0"
+    },
+    "server_version": {
+      "type": "string"
+    },
+    "identity_id": {
+      "type": "string"
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "limits": {
+      "type": "object",
+      "required": [
+        "max_message_bytes",
+        "heartbeat_seconds"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "max_message_bytes": {
+          "type": "integer",
+          "minimum": 1024
+        },
+        "heartbeat_seconds": {
+          "type": "integer",
+          "minimum": 5
+        }
+      }
+    }
+  }
+}

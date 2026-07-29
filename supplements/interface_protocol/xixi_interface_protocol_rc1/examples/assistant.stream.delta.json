@@ -1,0 +1,20 @@
+{
+  "protocol": "xixi/1.0",
+  "id": "msg_example_011",
+  "type": "assistant.stream.delta",
+  "timestamp": "2026-07-30T01:11:00+08:00",
+  "session_id": "ses_example_001",
+  "trace_id": "trc_example_001",
+  "reply_to": null,
+  "source": "container",
+  "target": "ui",
+  "sequence": 11,
+  "ack_required": false,
+  "replay_safe": false,
+  "payload": {
+    "turn_id": "turn_example_001",
+    "message_id": "assistant_example_001",
+    "index": 0,
+    "text": "分析完成，"
+  }
+}

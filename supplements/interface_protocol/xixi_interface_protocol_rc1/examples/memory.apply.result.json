@@ -1,0 +1,26 @@
+{
+  "protocol": "xixi/1.0",
+  "id": "msg_example_016",
+  "type": "memory.apply.result",
+  "timestamp": "2026-07-30T01:16:00+08:00",
+  "session_id": "ses_example_001",
+  "trace_id": "trc_example_001",
+  "reply_to": null,
+  "source": "container",
+  "target": "soul",
+  "sequence": 16,
+  "ack_required": false,
+  "replay_safe": false,
+  "payload": {
+    "turn_id": "turn_example_003",
+    "results": [
+      {
+        "index": 0,
+        "status": "applied",
+        "record_id": "mem_division_001",
+        "error_code": null,
+        "message": null
+      }
+    ]
+  }
+}

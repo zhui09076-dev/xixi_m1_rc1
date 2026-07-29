@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xixi.local/schemas/messages/tool.execute.request.schema.json",
+  "title": "XiXi Message: tool.execute.request",
+  "allOf": [
+    {
+      "$ref": "../envelope.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "tool.execute.request"
+        },
+        "source": {
+          "const": "container"
+        },
+        "target": {
+          "const": "tool"
+        },
+        "ack_required": {
+          "const": true
+        },
+        "payload": {
+          "$ref": "../payloads/tool.execute.request.schema.json"
+        }
+      }
+    }
+  ]
+}

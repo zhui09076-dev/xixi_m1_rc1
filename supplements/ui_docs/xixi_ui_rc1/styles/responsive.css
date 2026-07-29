@@ -1,0 +1,30 @@
+@media (min-aspect-ratio: 20/9) {
+  .status-chip { left: 40px; top: 32px; }
+  .rail { left: 34px; top: 250px; width: 60px; }
+  .rail.is-expanded { width: 190px; }
+  .app-library { left: 112px; top: 240px; width: 390px; }
+  .main-panel { right: 36px; width: 480px; height: min(780px, calc(100vh - 130px)); }
+  .composer { width: min(760px, calc(100vw - 400px)); bottom: 32px; }
+}
+
+@media (min-aspect-ratio: 28/9) {
+  .status-chip { left: 46px; }
+  .rail { left: 38px; width: 62px; }
+  .rail.is-expanded { width: 198px; }
+  .app-library { left: 122px; width: 420px; }
+  .main-panel { right: 42px; width: 520px; height: min(800px, calc(100vh - 130px)); }
+  .composer { width: min(860px, calc(100vw - 600px)); }
+}
+
+@media (max-width: 1200px) {
+  .main-panel { width: 390px; right: 18px; }
+  .composer { width: min(560px, calc(100vw - 180px)); }
+  .rail { left: 16px; }
+  .status-chip { left: 18px; }
+}
+
+@media (max-height: 760px) {
+  .main-panel { height: calc(100vh - 90px); }
+  .rail { top: 100px; }
+  .app-library { top: 92px; max-height: calc(100vh - 150px); }
+}

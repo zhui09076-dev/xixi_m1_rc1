@@ -1,0 +1,14 @@
+{
+  "states": [
+    "idle",
+    "typing",
+    "streaming",
+    "interrupted",
+    "disabled"
+  ],
+  "actions": [
+    "send",
+    "interrupt",
+    "voice_optional"
+  ]
+}

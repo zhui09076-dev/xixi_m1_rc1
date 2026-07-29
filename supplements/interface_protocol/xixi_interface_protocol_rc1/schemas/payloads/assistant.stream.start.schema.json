@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xixi.local/schemas/payloads/assistant.stream.start.schema.json",
+  "title": "assistant.stream.start",
+  "type": "object",
+  "required": [
+    "turn_id",
+    "message_id",
+    "mode"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "turn_id": {
+      "type": "string"
+    },
+    "message_id": {
+      "type": "string"
+    },
+    "mode": {
+      "enum": [
+        "companion",
+        "answer",
+        "advice",
+        "execution",
+        "correction",
+        "quiet"
+      ]
+    }
+  }
+}

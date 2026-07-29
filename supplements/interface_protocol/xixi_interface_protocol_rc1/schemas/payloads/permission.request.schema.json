@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xixi.local/schemas/payloads/permission.request.schema.json",
+  "title": "permission.request",
+  "type": "object",
+  "required": [
+    "turn_id",
+    "permission_id",
+    "operation",
+    "target",
+    "scope",
+    "risk",
+    "reason",
+    "options"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "turn_id": {
+      "type": "string"
+    },
+    "permission_id": {
+      "type": "string"
+    },
+    "operation": {
+      "type": "string"
+    },
+    "target": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "scope": {
+      "type": "object"
+    },
+    "risk": {
+      "enum": [
+        "outbound_private",
+        "irreversible"
+      ]
+    },
+    "reason": {
+      "type": "string"
+    },
+    "options": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "allow_once",
+          "allow_scope",
+          "deny"
+        ]
+      },
+      "minItems": 2
+    },
+    "expires_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    }
+  }
+}

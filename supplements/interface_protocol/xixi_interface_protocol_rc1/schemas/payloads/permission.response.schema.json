@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xixi.local/schemas/payloads/permission.response.schema.json",
+  "title": "permission.response",
+  "type": "object",
+  "required": [
+    "permission_id",
+    "decision"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "permission_id": {
+      "type": "string"
+    },
+    "decision": {
+      "enum": [
+        "allow_once",
+        "allow_scope",
+        "deny"
+      ]
+    },
+    "scope_override": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "user_note": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

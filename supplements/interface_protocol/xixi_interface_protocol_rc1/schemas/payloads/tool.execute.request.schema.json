@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xixi.local/schemas/payloads/tool.execute.request.schema.json",
+  "title": "tool.execute.request",
+  "type": "object",
+  "required": [
+    "turn_id",
+    "request_id",
+    "tool_request",
+    "permission_state"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "turn_id": {
+      "type": "string"
+    },
+    "request_id": {
+      "type": "string"
+    },
+    "tool_request": {
+      "$ref": "../imported/soul/tool_request.schema.json"
+    },
+    "permission_state": {
+      "enum": [
+        "not_required",
+        "pending",
+        "granted_once",
+        "granted_scope",
+        "denied"
+      ]
+    }
+  }
+}

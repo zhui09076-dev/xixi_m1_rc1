@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xixi.local/schemas/messages/ui.mode.set.schema.json",
+  "title": "XiXi Message: ui.mode.set",
+  "allOf": [
+    {
+      "$ref": "../envelope.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "ui.mode.set"
+        },
+        "source": {
+          "const": "container"
+        },
+        "target": {
+          "const": "ui"
+        },
+        "ack_required": {
+          "const": false
+        },
+        "payload": {
+          "$ref": "../payloads/ui.mode.set.schema.json"
+        }
+      }
+    }
+  ]
+}

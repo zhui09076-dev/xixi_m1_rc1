@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xixi.local/schemas/payloads/body.status.schema.json",
+  "title": "body.status",
+  "type": "object",
+  "required": [
+    "status",
+    "active_state",
+    "resolved_assets",
+    "fallback_used"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "status": {
+      "enum": [
+        "ready",
+        "transitioning",
+        "missing_asset",
+        "error",
+        "offline"
+      ]
+    },
+    "active_state": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "resolved_assets": {
+      "type": "object",
+      "required": [
+        "posture_id",
+        "motion_id",
+        "expression_id",
+        "camera_id"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "posture_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "motion_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "expression_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "camera_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "fallback_used": {
+      "type": "boolean"
+    },
+    "message": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

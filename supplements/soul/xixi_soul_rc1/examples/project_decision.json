@@ -1,0 +1,43 @@
+{
+  "reply": {
+    "text": "记下了。之后KM只做容器，我负责灵魂、身体和UI内容。",
+    "mode": "correction",
+    "interrupted": false,
+    "store_as_formal_reply": true
+  },
+  "state": {
+    "base": "working",
+    "substate": "organizing",
+    "emotion": "focused",
+    "relationship_distance": 0.58,
+    "initiative": 0.52,
+    "reason": "用户确认了项目正式分工。"
+  },
+  "memory_actions": [
+    {
+      "action": "save_memory",
+      "target_scope": "project",
+      "content": "KM负责容器；西西内容侧负责灵魂、身体和UI。",
+      "source_type": "user_decision",
+      "project_id": "xixi",
+      "target_id": null,
+      "retention": "project",
+      "reason": "这是后续交付边界的正式决定。",
+      "confidence": 1.0
+    }
+  ],
+  "tool_requests": [],
+  "body_intent": {
+    "posture": "work",
+    "motion": "note_update",
+    "expression": "focused_soft",
+    "camera": "medium",
+    "ui": "project",
+    "intensity": 0.45
+  },
+  "attention": {
+    "primary_task_id": "xixi-content",
+    "light_task_id": null,
+    "queue_new_heavy_task": false
+  }
+}

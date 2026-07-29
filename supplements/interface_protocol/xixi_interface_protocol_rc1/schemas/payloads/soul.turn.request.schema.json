@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xixi.local/schemas/payloads/soul.turn.request.schema.json",
+  "title": "soul.turn.request",
+  "type": "object",
+  "required": [
+    "turn_id",
+    "identity_id",
+    "messages",
+    "context",
+    "runtime_contract_version"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "turn_id": {
+      "type": "string"
+    },
+    "identity_id": {
+      "type": "string"
+    },
+    "messages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "role",
+          "content"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "role": {
+            "enum": [
+              "system",
+              "user",
+              "assistant",
+              "tool"
+            ]
+          },
+          "content": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "context": {
+      "type": "object",
+      "required": [
+        "project_ids",
+        "memory_ids",
+        "permission_snapshot",
+        "attention"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "project_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "memory_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "permission_snapshot": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "attention": {
+          "type": "object",
+          "required": [
+            "primary_task_id",
+            "light_task_id"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "primary_task_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "light_task_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "runtime_contract_version": {
+      "const": "1.0.0"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xixi.local/schemas/messages/soul.turn.request.schema.json",
+  "title": "XiXi Message: soul.turn.request",
+  "allOf": [
+    {
+      "$ref": "../envelope.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "soul.turn.request"
+        },
+        "source": {
+          "const": "container"
+        },
+        "target": {
+          "const": "soul"
+        },
+        "ack_required": {
+          "const": true
+        },
+        "payload": {
+          "$ref": "../payloads/soul.turn.request.schema.json"
+        }
+      }
+    }
+  ]
+}

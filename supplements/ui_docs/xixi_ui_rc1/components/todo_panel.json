@@ -1,0 +1,13 @@
+{
+  "states": [
+    "closed",
+    "open",
+    "editing"
+  ],
+  "features": [
+    "add",
+    "complete",
+    "priority",
+    "due_optional"
+  ]
+}

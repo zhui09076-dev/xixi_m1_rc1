@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xixi.local/schemas/payloads/memory.apply.request.schema.json",
+  "title": "memory.apply.request",
+  "type": "object",
+  "required": [
+    "turn_id",
+    "actions"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "turn_id": {
+      "type": "string"
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "$ref": "../imported/soul/memory_action.schema.json"
+      }
+    }
+  }
+}

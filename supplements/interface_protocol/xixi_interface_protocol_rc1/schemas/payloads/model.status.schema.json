@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xixi.local/schemas/payloads/model.status.schema.json",
+  "title": "model.status",
+  "type": "object",
+  "required": [
+    "provider",
+    "model",
+    "status",
+    "context_tokens",
+    "local"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "provider": {
+      "type": "string"
+    },
+    "model": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "status": {
+      "enum": [
+        "offline",
+        "loading",
+        "ready",
+        "generating",
+        "unloading",
+        "error"
+      ]
+    },
+    "context_tokens": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "local": {
+      "type": "boolean"
+    },
+    "vram_used_mb": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "error": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

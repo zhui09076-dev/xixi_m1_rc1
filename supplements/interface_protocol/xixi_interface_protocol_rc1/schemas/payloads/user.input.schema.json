@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xixi.local/schemas/payloads/user.input.schema.json",
+  "title": "user.input",
+  "type": "object",
+  "required": [
+    "turn_id",
+    "content",
+    "input_mode",
+    "attachments",
+    "client_context"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "turn_id": {
+      "type": "string",
+      "pattern": "^turn_[A-Za-z0-9_-]{8,}$"
+    },
+    "content": {
+      "type": "string"
+    },
+    "input_mode": {
+      "enum": [
+        "text",
+        "voice_transcript",
+        "system_action"
+      ]
+    },
+    "attachments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "attachment_id",
+          "kind",
+          "display_name",
+          "local_uri"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "attachment_id": {
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "image",
+              "audio",
+              "document",
+              "file",
+              "folder_ref"
+            ]
+          },
+          "display_name": {
+            "type": "string"
+          },
+          "local_uri": {
+            "type": "string"
+          },
+          "mime_type": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "sha256": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "client_context": {
+      "type": "object",
+      "required": [
+        "active_panel",
+        "foreground_app",
+        "quiet_mode"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "active_panel": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "foreground_app": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "quiet_mode": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

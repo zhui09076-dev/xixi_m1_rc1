@@ -1,0 +1,22 @@
+{
+  "protocol": "xixi/1.0",
+  "id": "msg_example_021",
+  "type": "task.status",
+  "timestamp": "2026-07-30T01:21:00+08:00",
+  "session_id": "ses_example_001",
+  "trace_id": "trc_example_001",
+  "reply_to": null,
+  "source": "container",
+  "target": "ui",
+  "sequence": 21,
+  "ack_required": false,
+  "replay_safe": false,
+  "payload": {
+    "task_id": "task_ui_rc1",
+    "kind": "heavy",
+    "status": "running",
+    "progress": 0.62,
+    "summary": "正在完成UI RC1",
+    "resume_token": null
+  }
+}
