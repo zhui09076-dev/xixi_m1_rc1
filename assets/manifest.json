@@ -1,0 +1,14 @@
+{
+  "packages": [
+    {
+      "id": "default",
+      "name": "默认资产包",
+      "version": "1.0.0",
+      "compatible_core": ">=1.0.0",
+      "scenes": ["living_room", "bedroom", "study"],
+      "characters": ["standing", "sitting", "working", "resting"],
+      "manifest_path": "assets/manifest.json"
+    }
+  ],
+  "active_package": "default"
+}

@@ -1,0 +1,35 @@
+window:
+  width: 1920
+  height: 1080
+  fullscreen: true
+
+render:
+  fps: 30
+  scale: 1.0
+  layers:
+    - background
+    - character
+    - foreground
+    - lighting
+
+ollama:
+  host: "http://localhost:11434"
+  model: "richardyoung/qwen3.6-27b-abliterated:latest"
+  timeout: 120
+
+voice:
+  enabled: false
+  model: "default"
+  language: "zh"
+
+assets:
+  scene_dir: "assets/scenes"
+  character_dir: "assets/characters"
+  manifest: "assets/manifest.json"
+
+behavior:
+  idle_timeout: 300
+  max_chat_history: 50
+
+database:
+  path: "data/xixi.db"
