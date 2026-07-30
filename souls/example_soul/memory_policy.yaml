@@ -1,0 +1,8 @@
+memory_policy:
+  default_retention: "medium"
+  auto_forget_after_days: 30
+  important_keywords:
+    - "重要"
+    - "记住"
+    - "别忘了"
+  confidence_threshold: 0.7

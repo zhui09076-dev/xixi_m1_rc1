@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xixi.local/schemas/payloads/session.hello.schema.json",
+  "title": "session.hello",
+  "type": "object",
+  "required": [
+    "client_name",
+    "client_version",
+    "supported_protocols",
+    "capabilities"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "client_name": {
+      "type": "string"
+    },
+    "client_version": {
+      "type": "string"
+    },
+    "supported_protocols": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "resume_session_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "locale": {
+      "type": "string"
+    }
+  }
+}

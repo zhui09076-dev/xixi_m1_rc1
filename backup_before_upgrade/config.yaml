@@ -1,0 +1,66 @@
+window:
+  width: 1920
+  height: 1080
+  fullscreen: true
+  renderer_click_through: true
+  ui_always_on_top: false
+  show_taskbar: true
+
+render:
+  fps: 30
+  scale: 1.0
+  layers:
+    - background
+    - character
+    - foreground
+    - lighting
+
+ollama:
+  host: "http://localhost:11434"
+  model: "richardyoung/qwen3.6-27b-abliterated:latest"
+  timeout: 120
+  context_length: 8192
+  num_gpu: -1
+  num_thread: 0
+  temperature: 0.7
+  top_p: 0.9
+  top_k: 40
+  repeat_penalty: 1.1
+  keep_alive: "5m"
+  system_prompt_template: "default"
+
+voice:
+  enabled: false
+  model: "default"
+  language: "zh"
+
+assets:
+  scene_dir: "assets/scenes"
+  character_dir: "assets/characters"
+  manifest: "assets/manifest.json"
+
+behavior:
+  idle_timeout: 300
+  max_chat_history: 50
+
+database:
+  path: "data/xixi.db"
+
+permissions:
+  public_web_read_default: true
+  authorized_paths:
+    - "assets"
+    - "data"
+    - "logs"
+    - "projects"
+    - "workspace"
+    - "temp"
+    - "extensions"
+    - "souls"
+    - "bodies"
+    - "development"
+
+soul_packages_dir: "souls"
+body_packages_dir: "bodies"
+extensions_dir: "extensions"
+development_dir: "development"

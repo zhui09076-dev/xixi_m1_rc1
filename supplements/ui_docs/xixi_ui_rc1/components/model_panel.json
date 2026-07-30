@@ -1,0 +1,17 @@
+{
+  "states": [
+    "offline",
+    "idle",
+    "loading",
+    "ready",
+    "generating",
+    "error"
+  ],
+  "features": [
+    "provider_status",
+    "model_select",
+    "context",
+    "load",
+    "unload"
+  ]
+}

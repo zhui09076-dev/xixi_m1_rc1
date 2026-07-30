@@ -1,0 +1,30 @@
+{
+  "packageType": "xixi-soul",
+  "packageId": "example-soul",
+  "version": "1.0.0",
+  "schemaVersion": "1.0.0",
+  "language": "zh-CN",
+  "encoding": "UTF-8",
+  "status": "example",
+  "entry": {
+    "identity": "identity.yaml",
+    "constitution": "constitution.yaml",
+    "personality": "personality.yaml",
+    "conversation": "conversation.yaml",
+    "memoryPolicy": "memory_policy.yaml",
+    "autonomy": "autonomy.yaml"
+  },
+  "compatibility": {
+    "minimumContainerVersion": "0.1.0",
+    "llmProviderAgnostic": true,
+    "localModelSupported": true,
+    "onlineModelSupported": true
+  },
+  "persistence": {
+    "identityLivesOutsideModel": true,
+    "preserveMemoryAcrossModelSwitch": true,
+    "preserveRelationshipAcrossBodySwitch": true,
+    "preserveProjectsAcrossSoulUpgrade": true,
+    "rollbackRequired": true
+  }
+}

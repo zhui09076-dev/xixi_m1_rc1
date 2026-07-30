@@ -1,0 +1,29 @@
+{
+  "protocol": "xixi/1.0",
+  "id": "msg_example_002",
+  "type": "session.ready",
+  "timestamp": "2026-07-30T01:02:00+08:00",
+  "session_id": "ses_example_001",
+  "trace_id": "trc_example_001",
+  "reply_to": "msg_example_001",
+  "source": "container",
+  "target": "ui",
+  "sequence": 2,
+  "ack_required": false,
+  "replay_safe": false,
+  "payload": {
+    "selected_protocol": "xixi/1.0",
+    "server_version": "0.1.0",
+    "identity_id": "xixi-main",
+    "features": [
+      "memory",
+      "tools",
+      "body_intent",
+      "streaming"
+    ],
+    "limits": {
+      "max_message_bytes": 1048576,
+      "heartbeat_seconds": 20
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "protocol": "xixi/1.0",
+  "id": "msg_example_019",
+  "type": "body.status",
+  "timestamp": "2026-07-30T01:19:00+08:00",
+  "session_id": "ses_example_001",
+  "trace_id": "trc_example_001",
+  "reply_to": null,
+  "source": "body",
+  "target": "container",
+  "sequence": 19,
+  "ack_required": false,
+  "replay_safe": false,
+  "payload": {
+    "status": "missing_asset",
+    "active_state": "waiting",
+    "resolved_assets": {
+      "posture_id": "posture_idle_stand_v1",
+      "motion_id": "motion_idle_breathing_v1",
+      "expression_id": "expression_neutral_v1",
+      "camera_id": "camera_medium_v1"
+    },
+    "fallback_used": true,
+    "message": "等待姿态尚未提供，已回退到中性站姿"
+  }
+}

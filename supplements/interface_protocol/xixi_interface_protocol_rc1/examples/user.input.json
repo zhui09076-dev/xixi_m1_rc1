@@ -1,0 +1,34 @@
+{
+  "protocol": "xixi/1.0",
+  "id": "msg_example_003",
+  "type": "user.input",
+  "timestamp": "2026-07-30T01:03:00+08:00",
+  "session_id": "ses_example_001",
+  "trace_id": "trc_example_001",
+  "reply_to": null,
+  "source": "ui",
+  "target": "container",
+  "sequence": 3,
+  "ack_required": true,
+  "replay_safe": false,
+  "payload": {
+    "turn_id": "turn_example_001",
+    "content": "把项目源代码发给在线模型分析。",
+    "input_mode": "text",
+    "attachments": [
+      {
+        "attachment_id": "att_example_001",
+        "kind": "folder_ref",
+        "display_name": "xixi-project",
+        "local_uri": "file:///C:/Users/99678/projects/xixi",
+        "mime_type": null,
+        "sha256": null
+      }
+    ],
+    "client_context": {
+      "active_panel": "chat",
+      "foreground_app": "desktop",
+      "quiet_mode": false
+    }
+  }
+}

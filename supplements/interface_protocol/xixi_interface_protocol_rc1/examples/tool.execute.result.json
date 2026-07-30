@@ -1,0 +1,24 @@
+{
+  "protocol": "xixi/1.0",
+  "id": "msg_example_009",
+  "type": "tool.execute.result",
+  "timestamp": "2026-07-30T01:09:00+08:00",
+  "session_id": "ses_example_001",
+  "trace_id": "trc_example_001",
+  "reply_to": null,
+  "source": "tool",
+  "target": "container",
+  "sequence": 9,
+  "ack_required": false,
+  "replay_safe": false,
+  "payload": {
+    "turn_id": "turn_example_001",
+    "request_id": "toolreq_example_001",
+    "status": "success",
+    "result": {
+      "summary": "分析完成",
+      "provider": "external-model"
+    },
+    "error": null
+  }
+}

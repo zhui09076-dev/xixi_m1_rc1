@@ -1,0 +1,14 @@
+{
+  "states": [
+    "closed",
+    "open",
+    "updating"
+  ],
+  "sections": [
+    "status",
+    "decisions",
+    "blockers",
+    "next_step",
+    "deliverables"
+  ]
+}

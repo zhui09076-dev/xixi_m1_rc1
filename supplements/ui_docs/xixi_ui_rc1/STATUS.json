@@ -1,0 +1,23 @@
+{
+  "package": "xixi-ui-main",
+  "version": "0.9.0-rc1",
+  "formalV1Frozen": false,
+  "completed": [
+    "visual_tokens",
+    "responsive_layouts",
+    "four_runtime_modes",
+    "interactive_prototype",
+    "component_contracts",
+    "svg_icon_set",
+    "browser_render_previews",
+    "automated_static_checks"
+  ],
+  "pendingBeforeV1": [
+    "real_container_window_integration",
+    "qt_or_electron_component_mapping",
+    "real_body_safe_area_validation",
+    "keyboard_and_ime_validation_on_windows",
+    "actual_permission_gateway_binding",
+    "actual_model_stream_interrupt_binding"
+  ]
+}

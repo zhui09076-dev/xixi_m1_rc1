@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xixi.local/schemas/messages/memory.apply.result.schema.json",
+  "title": "XiXi Message: memory.apply.result",
+  "allOf": [
+    {
+      "$ref": "../envelope.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "memory.apply.result"
+        },
+        "source": {
+          "const": "container"
+        },
+        "target": {
+          "const": "soul"
+        },
+        "ack_required": {
+          "const": false
+        },
+        "payload": {
+          "$ref": "../payloads/memory.apply.result.schema.json"
+        }
+      }
+    }
+  ]
+}

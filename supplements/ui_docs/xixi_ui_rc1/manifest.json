@@ -1,0 +1,41 @@
+{
+  "packageType": "xixi-ui",
+  "packageId": "xixi-ui-main",
+  "version": "0.9.0-rc1",
+  "status": "release-candidate",
+  "entry": "index.html",
+  "theme": "styles/tokens.css",
+  "layoutProfiles": [
+    "layouts/desktop_16_9.json",
+    "layouts/desktop_21_9.json",
+    "layouts/desktop_32_9.json"
+  ],
+  "modes": [
+    "quiet",
+    "chat",
+    "work",
+    "permission"
+  ],
+  "components": [
+    "app_library",
+    "chat_panel",
+    "quick_note",
+    "todo_panel",
+    "project_panel",
+    "model_panel",
+    "permission_dialog",
+    "settings_panel",
+    "status_chip",
+    "composer"
+  ],
+  "principles": {
+    "characterRemainsPrimary": true,
+    "appLibraryCollapsedByDefault": true,
+    "noFullScreenDashboard": true,
+    "rendererAndUiSeparateWindows": true,
+    "uiMustRemainInteractive": true,
+    "faceSafeAreaRequired": true,
+    "bodyAssetsIncluded": false,
+    "sceneAssetsIncluded": false
+  }
+}

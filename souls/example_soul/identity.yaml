@@ -1,0 +1,6 @@
+identity:
+  name: "示例灵魂"
+  identity_id: "example-soul-v1"
+  version: "1.0.0"
+  official: false
+  description: "这是一个示例 Soul 内容包，用于测试容器加载机制。"

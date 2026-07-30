@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xixi.local/schemas/payloads/assistant.stream.interrupted.schema.json",
+  "title": "assistant.stream.interrupted",
+  "type": "object",
+  "required": [
+    "turn_id",
+    "message_id",
+    "scope",
+    "partial_text_saved"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "turn_id": {
+      "type": "string"
+    },
+    "message_id": {
+      "type": "string"
+    },
+    "scope": {
+      "enum": [
+        "generation",
+        "speech",
+        "tool",
+        "task",
+        "all"
+      ]
+    },
+    "partial_text_saved": {
+      "const": false
+    },
+    "task_resume_token": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

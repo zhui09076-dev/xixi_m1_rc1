@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xixi.local/schemas/imported/soul/memory_action.schema.json",
+  "title": "XiXi Memory Action",
+  "type": "object",
+  "required": [
+    "action",
+    "target_scope",
+    "reason",
+    "confidence"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "action": {
+      "enum": [
+        "save_raw",
+        "save_memory",
+        "supersede_memory",
+        "update_retention",
+        "search_memory",
+        "soft_delete",
+        "purge"
+      ]
+    },
+    "target_scope": {
+      "type": "string"
+    },
+    "content": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        null,
+        "user_quote",
+        "user_decision",
+        "confirmed_fact",
+        "tool_result",
+        "xixi_opinion",
+        "xixi_inference",
+        "creative_content",
+        "system_event"
+      ]
+    },
+    "project_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "target_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "retention": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "reason": {
+      "type": "string"
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    }
+  }
+}

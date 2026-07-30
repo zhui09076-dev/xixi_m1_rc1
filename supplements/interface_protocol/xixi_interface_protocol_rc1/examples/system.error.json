@@ -1,0 +1,24 @@
+{
+  "protocol": "xixi/1.0",
+  "id": "msg_example_022",
+  "type": "system.error",
+  "timestamp": "2026-07-30T01:22:00+08:00",
+  "session_id": "ses_example_001",
+  "trace_id": "trc_example_001",
+  "reply_to": null,
+  "source": "container",
+  "target": "ui",
+  "sequence": 22,
+  "ack_required": false,
+  "replay_safe": false,
+  "payload": {
+    "code": "XIXI_TOOL_EXECUTION_FAILED",
+    "message": "文件删除失败：访问被拒绝。",
+    "severity": "error",
+    "retryable": true,
+    "related_message_id": "msg_example_008",
+    "details": {
+      "os_code": 5
+    }
+  }
+}

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="color-scheme" content="dark"/>
+  <title>西西 UI RC1</title>
+  <link rel="stylesheet" href="styles/tokens.css"/>
+  <link rel="stylesheet" href="styles/base.css"/>
+  <link rel="stylesheet" href="styles/components.css"/>
+  <link rel="stylesheet" href="styles/responsive.css"/>
+</head>
+<body>
+<div id="app" data-mode="quiet">
+  <div class="ambient">
+    <div class="ambient-glow"></div>
+    <div class="stage-safe-area"></div>
+  </div>
+
+  <div id="toast" class="toast glass">已保存</div>
+
+  <div class="status-chip glass">
+    <span class="status-dot"></span>
+    <span class="status-main">西西 · 安静陪伴</span>
+    <span class="status-sub">本地</span>
+  </div>
+
+  <nav id="rail" class="rail glass" aria-label="西西应用库">
+    <button class="rail-button" data-action="toggle-library" title="应用库">
+      <img class="icon" src="assets/icons/apps.svg" alt=""/>
+      <span class="rail-label">应用库</span>
+    </button>
+    <button class="rail-button" data-panel="chat" title="对话">
+      <img class="icon" src="assets/icons/chat.svg" alt=""/>
+      <span class="rail-label">对话</span>
+    </button>
+    <button class="rail-button" data-panel="note" title="记录">
+      <img class="icon" src="assets/icons/note.svg" alt=""/>
+      <span class="rail-label">记录</span>
+    </button>
+    <button class="rail-button" data-panel="todo" title="待办">
+      <img class="icon" src="assets/icons/todo.svg" alt=""/>
+      <span class="rail-label">待办</span>
+    </button>
+    <button class="rail-button" data-panel="project" title="项目">
+      <img class="icon" src="assets/icons/project.svg" alt=""/>
+      <span class="rail-label">项目</span>
+    </button>
+    <button class="rail-button" data-panel="model" title="模型">
+      <img class="icon" src="assets/icons/model.svg" alt=""/>
+      <span class="rail-label">模型</span>
+    </button>
+    <div class="rail-divider"></div>
+    <button class="rail-button" data-panel="settings" title="设置">
+      <img class="icon" src="assets/icons/settings.svg" alt=""/>
+      <span class="rail-label">设置</span>
+    </button>
+  </nav>
+
+  <section id="app-library" class="panel app-library glass" aria-label="应用库">
+    <div class="panel-header">
+      <div class="panel-heading">
+        <div class="panel-title">应用库</div>
+        <div class="panel-subtitle">轻量入口，默认收起</div>
+      </div>
+      <button class="icon-button" data-action="close-library" aria-label="关闭">
+        <img class="icon" src="assets/icons/close.svg" alt=""/>
+      </button>
+    </div>
+    <div class="search-box">
+      <img class="icon" src="assets/icons/search.svg" alt=""/>
+      <input id="app-search" placeholder="搜索功能"/>
+    </div>
+    <div class="app-grid">
+      <button class="app-card" data-panel="chat"><img class="icon" src="assets/icons/chat.svg" alt=""/><div class="app-card-title">对话</div><div class="app-card-sub">自然交流与打断</div></button>
+      <button class="app-card" data-panel="note"><img class="icon" src="assets/icons/note.svg" alt=""/><div class="app-card-title">快速记录</div><div class="app-card-sub">原话与摘要分离</div></button>
+      <button class="app-card" data-panel="todo"><img class="icon" src="assets/icons/todo.svg" alt=""/><div class="app-card-title">待办</div><div class="app-card-sub">轻任务与提醒</div></button>
+      <button class="app-card" data-panel="project"><img class="icon" src="assets/icons/project.svg" alt=""/><div class="app-card-title">项目</div><div class="app-card-sub">决定、阻塞与下一步</div></button>
+      <button class="app-card" data-panel="model"><img class="icon" src="assets/icons/model.svg" alt=""/><div class="app-card-title">模型</div><div class="app-card-sub">本地状态与上下文</div></button>
+      <button class="app-card" data-panel="settings"><img class="icon" src="assets/icons/settings.svg" alt=""/><div class="app-card-title">设置</div><div class="app-card-sub">主动性、记忆与权限</div></button>
+    </div>
+  </section>
+
+  <section id="main-panel" class="panel main-panel glass" aria-live="polite">
+    <div id="panel-content"></div>
+  </section>
+
+  <div id="composer" class="composer glass">
+    <textarea id="composer-input" rows="1" placeholder="和西西说点什么…"></textarea>
+    <button id="composer-send" class="composer-send" aria-label="发送">
+      <img class="icon" src="assets/icons/send.svg" alt=""/>
+    </button>
+  </div>
+
+  <div id="quiet-indicator" class="quiet-indicator">
+    <span class="breath"></span>
+    <span>安静陪着</span>
+  </div>
+
+  <div id="permission" class="permission-backdrop">
+    <div class="permission-card glass">
+      <div class="permission-icon"><img class="icon" src="assets/icons/shield.svg" alt=""/></div>
+      <div class="permission-title">需要你的确认</div>
+      <div class="permission-copy">这次操作会把私人项目文件发送到外部服务。西西不会在未确认的情况下执行。</div>
+      <div class="permission-detail">
+        <div><span>操作</span><b>上传并分析项目文件</b></div>
+        <div><span>目标</span><b>外部在线模型</b></div>
+        <div><span>范围</span><b>3个源代码文件</b></div>
+        <div><span>风险</span><b style="color:var(--danger)">私人数据外发</b></div>
+      </div>
+      <div class="permission-actions">
+        <button class="text-button" data-action="deny-permission">取消</button>
+        <button class="text-button" data-action="allow-once">仅本次允许</button>
+        <button class="text-button primary" data-action="allow-scope">允许此范围</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="qrc:///qtwebchannel/qwebchannel.js"></script>
+<script src="scripts/app.js"></script>
+</body>
+</html>

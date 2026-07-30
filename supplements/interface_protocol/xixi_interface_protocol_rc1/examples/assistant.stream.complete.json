@@ -1,0 +1,25 @@
+{
+  "protocol": "xixi/1.0",
+  "id": "msg_example_012",
+  "type": "assistant.stream.complete",
+  "timestamp": "2026-07-30T01:12:00+08:00",
+  "session_id": "ses_example_001",
+  "trace_id": "trc_example_001",
+  "reply_to": null,
+  "source": "container",
+  "target": "ui",
+  "sequence": 12,
+  "ack_required": false,
+  "replay_safe": false,
+  "payload": {
+    "turn_id": "turn_example_001",
+    "message_id": "assistant_example_001",
+    "text": "分析完成，结果已返回。仅本次授权不会保留。",
+    "mode": "execution",
+    "store_as_formal_reply": true,
+    "memory_result_ids": [],
+    "tool_result_ids": [
+      "toolres_example_001"
+    ]
+  }
+}

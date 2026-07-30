@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xixi.local/schemas/messages/permission.response.schema.json",
+  "title": "XiXi Message: permission.response",
+  "allOf": [
+    {
+      "$ref": "../envelope.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "permission.response"
+        },
+        "source": {
+          "const": "ui"
+        },
+        "target": {
+          "const": "container"
+        },
+        "ack_required": {
+          "const": true
+        },
+        "payload": {
+          "$ref": "../payloads/permission.response.schema.json"
+        }
+      }
+    }
+  ]
+}

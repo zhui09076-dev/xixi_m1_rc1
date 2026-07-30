@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xixi.local/schemas/payloads/body.intent.set.schema.json",
+  "title": "body.intent.set",
+  "type": "object",
+  "required": [
+    "turn_id",
+    "state",
+    "intent",
+    "transition"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "turn_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "state": {
+      "enum": [
+        "sleeping",
+        "alone",
+        "working",
+        "thinking",
+        "waiting",
+        "accompanying",
+        "communicating",
+        "executing"
+      ]
+    },
+    "intent": {
+      "type": "object",
+      "required": [
+        "posture",
+        "motion",
+        "expression",
+        "camera",
+        "ui",
+        "intensity"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "posture": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "motion": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "expression": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "camera": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ui": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "intensity": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "transition": {
+      "type": "object",
+      "required": [
+        "duration_ms",
+        "interruptible"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "duration_ms": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 10000
+        },
+        "interruptible": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

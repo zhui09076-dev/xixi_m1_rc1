@@ -1,0 +1,19 @@
+{
+  "protocol": "xixi/1.0",
+  "id": "msg_example_013",
+  "type": "user.interrupt",
+  "timestamp": "2026-07-30T01:13:00+08:00",
+  "session_id": "ses_example_001",
+  "trace_id": "trc_example_001",
+  "reply_to": null,
+  "source": "ui",
+  "target": "container",
+  "sequence": 13,
+  "ack_required": true,
+  "replay_safe": false,
+  "payload": {
+    "turn_id": "turn_example_002",
+    "scope": "all",
+    "reason": "用户明确说停"
+  }
+}

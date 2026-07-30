@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xixi.local/schemas/messages/permission.request.schema.json",
+  "title": "XiXi Message: permission.request",
+  "allOf": [
+    {
+      "$ref": "../envelope.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "permission.request"
+        },
+        "source": {
+          "const": "container"
+        },
+        "target": {
+          "const": "ui"
+        },
+        "ack_required": {
+          "const": true
+        },
+        "payload": {
+          "$ref": "../payloads/permission.request.schema.json"
+        }
+      }
+    }
+  ]
+}

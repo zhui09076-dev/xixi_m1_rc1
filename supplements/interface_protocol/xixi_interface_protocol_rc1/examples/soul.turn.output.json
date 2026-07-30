@@ -1,0 +1,58 @@
+{
+  "protocol": "xixi/1.0",
+  "id": "msg_example_005",
+  "type": "soul.turn.output",
+  "timestamp": "2026-07-30T01:05:00+08:00",
+  "session_id": "ses_example_001",
+  "trace_id": "trc_example_001",
+  "reply_to": null,
+  "source": "soul",
+  "target": "container",
+  "sequence": 5,
+  "ack_required": false,
+  "replay_safe": false,
+  "payload": {
+    "reply": {
+      "text": "这会把私人项目文件发送到外部服务，需要你确认发送范围和目标。",
+      "mode": "execution",
+      "interrupted": false,
+      "store_as_formal_reply": true
+    },
+    "state": {
+      "base": "waiting",
+      "substate": "permission",
+      "emotion": "focused",
+      "relationship_distance": 0.55,
+      "initiative": 0.6,
+      "reason": "等待私人数据外发授权"
+    },
+    "memory_actions": [],
+    "tool_requests": [
+      {
+        "capability": "online_model",
+        "operation": "analyze_files",
+        "target": "external-model",
+        "input": {
+          "attachment_ids": [
+            "att_example_001"
+          ]
+        },
+        "risk": "outbound_private",
+        "reason": "用户要求使用在线模型分析私人项目文件"
+      }
+    ],
+    "body_intent": {
+      "posture": "waiting",
+      "motion": "idle_breathing",
+      "expression": "attentive_neutral",
+      "camera": "medium",
+      "ui": "permission",
+      "intensity": 0.45
+    },
+    "attention": {
+      "primary_task_id": null,
+      "light_task_id": null,
+      "queue_new_heavy_task": false
+    }
+  }
+}

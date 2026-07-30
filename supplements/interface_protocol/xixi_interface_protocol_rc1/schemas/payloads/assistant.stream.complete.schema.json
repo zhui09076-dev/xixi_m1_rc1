@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xixi.local/schemas/payloads/assistant.stream.complete.schema.json",
+  "title": "assistant.stream.complete",
+  "type": "object",
+  "required": [
+    "turn_id",
+    "message_id",
+    "text",
+    "mode",
+    "store_as_formal_reply"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "turn_id": {
+      "type": "string"
+    },
+    "message_id": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "mode": {
+      "enum": [
+        "companion",
+        "answer",
+        "advice",
+        "execution",
+        "correction",
+        "quiet"
+      ]
+    },
+    "store_as_formal_reply": {
+      "type": "boolean"
+    },
+    "memory_result_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tool_result_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

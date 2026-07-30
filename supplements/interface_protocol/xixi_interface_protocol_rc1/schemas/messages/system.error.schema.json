@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xixi.local/schemas/messages/system.error.schema.json",
+  "title": "XiXi Message: system.error",
+  "allOf": [
+    {
+      "$ref": "../envelope.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "system.error"
+        },
+        "source": {
+          "const": "container"
+        },
+        "target": {
+          "const": "ui"
+        },
+        "ack_required": {
+          "const": false
+        },
+        "payload": {
+          "$ref": "../payloads/system.error.schema.json"
+        }
+      }
+    }
+  ]
+}

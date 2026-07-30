@@ -1,0 +1,27 @@
+{
+  "packageType": "xixi-body",
+  "packageId": "example-body",
+  "version": "1.0.0",
+  "schemaVersion": "1.0.0",
+  "status": "placeholder",
+  "note": "【占位资产】此包仅用于测试容器 Body 加载机制，非正式西西物料。",
+  "layers": {
+    "background": "scenes/placeholder_bg.png",
+    "character": "character/placeholder_char.png",
+    "foreground": "foreground/placeholder_fg.png",
+    "lighting": "lighting/placeholder_light.png"
+  },
+  "poses": {
+    "standing": "poses/standing.png",
+    "sitting": "poses/sitting.png",
+    "resting": "poses/resting.png"
+  },
+  "state_mapping": {
+    "alone": {"pose": "standing", "mood": "peaceful"},
+    "communicating": {"pose": "sitting", "mood": "engaged"},
+    "sleeping": {"pose": "resting", "mood": "peaceful"},
+    "working": {"pose": "standing", "mood": "focused"}
+  },
+  "anchor": {"x": 0.5, "y": 0.8},
+  "scale": 1.0
+}

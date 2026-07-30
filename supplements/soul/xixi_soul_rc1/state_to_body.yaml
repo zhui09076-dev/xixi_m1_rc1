@@ -1,0 +1,79 @@
+state_to_body:
+  version: 1.0.0
+  purpose: 只表达身体意图，不写死具体资产文件
+
+  defaults:
+    posture_intent: idle
+    motion_intent: breathing
+    expression_intent: neutral_soft
+    camera_intent: medium
+    ui_intent: minimal
+
+  mappings:
+    sleeping:
+      posture_intent: sleeping
+      motion_intent: breathing_slow
+      expression_intent: peaceful
+      camera_intent: wide
+      ui_intent: hidden
+
+    alone:
+      posture_intent: free_idle
+      motion_intent: natural_idle
+      expression_intent: neutral_soft
+      camera_intent: medium
+      ui_intent: minimal
+
+    working:
+      posture_intent: work
+      motion_intent: task_loop
+      expression_intent: focused_soft
+      camera_intent: medium
+      ui_intent: project
+
+    thinking:
+      posture_intent: think
+      motion_intent: thinking_loop
+      expression_intent: thoughtful
+      camera_intent: medium_close
+      ui_intent: minimal
+
+    waiting:
+      posture_intent: wait
+      motion_intent: patient_idle
+      expression_intent: neutral_soft
+      camera_intent: medium
+      ui_intent: status
+
+    accompanying:
+      posture_intent: relaxed
+      motion_intent: natural_idle
+      expression_intent: warm_soft
+      camera_intent: medium
+      ui_intent: minimal
+
+    communicating:
+      posture_intent: engage
+      motion_intent: conversational
+      expression_intent: attentive
+      camera_intent: medium_close
+      ui_intent: chat
+
+    executing:
+      posture_intent: task
+      motion_intent: executing
+      expression_intent: focused
+      camera_intent: medium
+      ui_intent: task
+
+  separation:
+    soul_decides:
+      - state
+      - emotion
+      - posture_intent
+      - motion_intent
+      - expression_intent
+      - camera_intent
+      - ui_intent
+    body_package_maps_intent_to_assets: true
+    container_executes_transitions_and_fallbacks: true

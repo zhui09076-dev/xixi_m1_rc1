@@ -1,0 +1,54 @@
+{
+  "aspect": "32:9",
+  "reference": [
+    5120,
+    1440
+  ],
+  "rail": {
+    "x": 38,
+    "y": 250,
+    "width": 62,
+    "height": 450
+  },
+  "status": {
+    "x": 46,
+    "y": 32,
+    "width": 300,
+    "height": 44
+  },
+  "composer": {
+    "anchor": "bottom-center",
+    "width": 860,
+    "height": 62,
+    "bottom": 32
+  },
+  "rightPanel": {
+    "anchor": "right-center",
+    "width": 520,
+    "maxHeight": 800,
+    "right": 42
+  },
+  "leftPanel": {
+    "anchor": "left-center",
+    "width": 420,
+    "maxHeight": 700,
+    "left": 122
+  },
+  "permission": {
+    "anchor": "center",
+    "width": 520,
+    "height": 320
+  },
+  "characterSafeArea": {
+    "x1": 0.4,
+    "y1": 0.08,
+    "x2": 0.64,
+    "y2": 0.98
+  },
+  "faceSafeArea": {
+    "x1": 0.47,
+    "y1": 0.08,
+    "x2": 0.57,
+    "y2": 0.34
+  }
+}

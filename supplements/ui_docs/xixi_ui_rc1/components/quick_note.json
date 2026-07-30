@@ -1,0 +1,13 @@
+{
+  "states": [
+    "closed",
+    "editing",
+    "saved",
+    "error"
+  ],
+  "rules": [
+    "raw_text_preserved",
+    "summary_separate",
+    "project_optional"
+  ]
+}

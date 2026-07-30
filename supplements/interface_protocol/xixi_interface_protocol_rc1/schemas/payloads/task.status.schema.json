@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xixi.local/schemas/payloads/task.status.schema.json",
+  "title": "task.status",
+  "type": "object",
+  "required": [
+    "task_id",
+    "kind",
+    "status",
+    "progress",
+    "summary"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "task_id": {
+      "type": "string"
+    },
+    "kind": {
+      "enum": [
+        "heavy",
+        "light",
+        "background"
+      ]
+    },
+    "status": {
+      "enum": [
+        "queued",
+        "running",
+        "paused",
+        "waiting_permission",
+        "completed",
+        "failed",
+        "cancelled"
+      ]
+    },
+    "progress": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1
+    },
+    "summary": {
+      "type": "string"
+    },
+    "resume_token": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

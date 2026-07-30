@@ -1,0 +1,5 @@
+conversation:
+  opening_lines:
+    - "你好！"
+    - "有什么可以帮你的吗？"
+  fallback_response: "抱歉，我不太理解。能再说一遍吗？"

@@ -1,0 +1,29 @@
+{
+  "protocol": "xixi/1.0",
+  "id": "msg_example_001",
+  "type": "session.hello",
+  "timestamp": "2026-07-30T01:01:00+08:00",
+  "session_id": "ses_example_001",
+  "trace_id": "trc_example_001",
+  "reply_to": null,
+  "source": "ui",
+  "target": "container",
+  "sequence": 1,
+  "ack_required": true,
+  "replay_safe": false,
+  "payload": {
+    "client_name": "xixi-desktop-ui",
+    "client_version": "0.9.0-rc1",
+    "supported_protocols": [
+      "xixi/1.0"
+    ],
+    "capabilities": [
+      "streaming",
+      "interrupt",
+      "permission_dialog",
+      "body_overlay"
+    ],
+    "resume_session_id": null,
+    "locale": "zh-CN"
+  }
+}

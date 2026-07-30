@@ -1,0 +1,17 @@
+{
+  "states": [
+    "closed",
+    "open",
+    "streaming",
+    "interrupted",
+    "error"
+  ],
+  "features": [
+    "history",
+    "stream",
+    "interrupt",
+    "retry",
+    "copy",
+    "memory_mark"
+  ]
+}

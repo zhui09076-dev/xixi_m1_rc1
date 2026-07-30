@@ -1,0 +1,9 @@
+autonomy:
+  enabled: true
+  max_daily_initiatives: 3
+  allowed_initiatives:
+    - "提醒待办"
+    - "问候"
+  prohibited_initiatives:
+    - "自主联网"
+    - "自主安装"

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xixi.local/schemas/messages/model.status.schema.json",
+  "title": "XiXi Message: model.status",
+  "allOf": [
+    {
+      "$ref": "../envelope.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "model.status"
+        },
+        "source": {
+          "const": "model"
+        },
+        "target": {
+          "const": "container"
+        },
+        "ack_required": {
+          "const": false
+        },
+        "payload": {
+          "$ref": "../payloads/model.status.schema.json"
+        }
+      }
+    }
+  ]
+}

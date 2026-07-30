@@ -1,0 +1,13 @@
+{
+  "packageType": "xixi-extension",
+  "packageId": "example-extension",
+  "version": "1.0.0",
+  "name": "示例扩展",
+  "description": "一个简单的示例扩展，用于测试扩展管理器。",
+  "entry": "main.py",
+  "permissions": ["local_read", "local_create"],
+  "config": {
+    "enabled_by_default": false
+  },
+  "tests": ["test_extension.py"]
+}

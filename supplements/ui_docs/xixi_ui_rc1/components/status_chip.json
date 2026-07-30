@@ -1,0 +1,12 @@
+{
+  "states": [
+    "sleeping",
+    "alone",
+    "working",
+    "thinking",
+    "waiting",
+    "accompanying",
+    "communicating",
+    "executing"
+  ]
+}
