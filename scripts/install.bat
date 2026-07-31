@@ -1,8 +1,8 @@
-@echo off
+﻿@echo off
 chcp 65001 >nul
 cd /d "%~dp0.."
 echo ==========================================
-echo   西西桌面伴侣 - 一键安装
+echo 西西桌面伴侣 - 一键安装
 echo ==========================================
 echo.
 
@@ -30,7 +30,7 @@ if errorlevel 1 (
 
 echo [4/5] 依赖安装完成
 echo [5/5] 初始化数据库...
-python -c "from core.database import Database; from core.config import Config; c=Config.load('config.yaml'); d=Database(c.get('database.path','data/xixi.db')); d.close(); print('数据库初始化完成')"
+python scripts\init_db.py
 if errorlevel 1 (
     echo [错误] 数据库初始化失败。
     pause
@@ -49,6 +49,6 @@ if errorlevel 1 (
 
 echo.
 echo ==========================================
-echo   安装完成！运行 scripts\start.bat
+echo 安装完成！运行 scripts\start.bat
 echo ==========================================
 pause

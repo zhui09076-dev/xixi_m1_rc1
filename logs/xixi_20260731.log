@@ -1,0 +1,249 @@
+2026-07-31 00:38:49 [INFO] xixi.main: === 西西桌面伴侣 启动 ===
+2026-07-31 00:38:49 [INFO] xixi.body: Body assets incomplete, using neutral placeholder
+2026-07-31 00:38:49 [INFO] xixi.soul: Soul package loaded from C:\Users\99678\Desktop\xixi_complete_integrated_repaired_1\supplements\soul\xixi_soul_rc1 (version 0.9.0-rc1)
+2026-07-31 00:38:49 [INFO] xixi.soul: Checksum verification passed for 34 files
+2026-07-31 00:38:49 [INFO] xixi.soul: Soul runtime validator initialized
+2026-07-31 00:38:49 [INFO] xixi.main: Soul loaded: xixi-soul-main v0.9.0-rc1
+2026-07-31 00:38:50 [INFO] xixi.ui.web: Loading UI RC1 from C:\Users\99678\Desktop\xixi_complete_integrated_repaired_1\ui_runtime\xixi_ui_rc1_integrated\index.html
+2026-07-31 00:38:50 [INFO] xixi.lifecycle: === 西西 启动开始 ===
+2026-07-31 00:38:50 [INFO] xixi.lifecycle: Backup created: C:\Users\99678\Desktop\xixi_complete_integrated_repaired_1\backups\backup_stable_20260730_163850
+2026-07-31 00:38:50 [INFO] xixi.lifecycle: Stable marker set: C:\Users\99678\Desktop\xixi_complete_integrated_repaired_1\backups\backup_stable_20260730_163850
+2026-07-31 00:39:05 [INFO] xixi.llm: Model richardyoung/qwen3.6-27b-abliterated:latest loaded successfully
+2026-07-31 00:39:05 [INFO] xixi.llm: LLMEngine aiohttp session closed
+2026-07-31 00:39:05 [INFO] xixi.lifecycle: Model preloaded: Model richardyoung/qwen3.6-27b-abliterated:latest loaded
+2026-07-31 00:39:05 [INFO] xixi.lifecycle: === 西西 启动完成 ===
+2026-07-31 00:39:05 [INFO] xixi.main: Container started
+2026-07-31 00:39:05 [INFO] xixi.protocol: xixi/1.0 Protocol Server started on http://127.0.0.1:17861
+2026-07-31 00:39:08 [INFO] xixi.main: Health check: degraded
+2026-07-31 00:39:09 [INFO] xixi.ui.web: UI RC1 reports ready
+2026-07-31 00:40:19 [INFO] xixi.main: Interrupt: session=unknown trace=trc_f7ad6bed
+2026-07-31 00:40:19 [WARNING] xixi.protocol: Session unknown not found, cannot send assistant.stream.interrupted
+2026-07-31 00:40:19 [INFO] xixi.main: Interrupted reply NOT saved
+2026-07-31 00:40:21 [INFO] xixi.main: Interrupt: session=unknown trace=trc_ed938519
+2026-07-31 00:40:21 [WARNING] xixi.protocol: Session unknown not found, cannot send assistant.stream.interrupted
+2026-07-31 00:40:21 [INFO] xixi.main: Interrupted reply NOT saved
+2026-07-31 00:40:25 [INFO] xixi.task: Task task_24a5e3fd started (weight=heavy)
+2026-07-31 00:40:25 [INFO] xixi.memory: Raw note saved: id=mem_a7f1f0a0e411 role=user
+2026-07-31 00:41:56 [INFO] xixi.main: === 西西桌面伴侣 启动 ===
+2026-07-31 00:41:56 [INFO] xixi.task: Restored 1 tasks from database
+2026-07-31 00:41:56 [INFO] xixi.body: Body assets incomplete, using neutral placeholder
+2026-07-31 00:41:56 [INFO] xixi.soul: Soul package loaded from C:\Users\99678\Desktop\xixi_complete_integrated_repaired_1\supplements\soul\xixi_soul_rc1 (version 0.9.0-rc1)
+2026-07-31 00:41:56 [INFO] xixi.soul: Checksum verification passed for 34 files
+2026-07-31 00:41:56 [INFO] xixi.soul: Soul runtime validator initialized
+2026-07-31 00:41:56 [INFO] xixi.main: Soul loaded: xixi-soul-main v0.9.0-rc1
+2026-07-31 00:41:57 [INFO] xixi.ui.web: Loading UI RC1 from C:\Users\99678\Desktop\xixi_complete_integrated_repaired_1\ui_runtime\xixi_ui_rc1_integrated\index.html
+2026-07-31 00:41:57 [INFO] xixi.lifecycle: === 西西 启动开始 ===
+2026-07-31 00:41:57 [INFO] xixi.lifecycle: Backup created: C:\Users\99678\Desktop\xixi_complete_integrated_repaired_1\backups\backup_stable_20260730_164157
+2026-07-31 00:41:57 [INFO] xixi.lifecycle: Stable marker set: C:\Users\99678\Desktop\xixi_complete_integrated_repaired_1\backups\backup_stable_20260730_164157
+2026-07-31 00:41:57 [INFO] xixi.llm: Model richardyoung/qwen3.6-27b-abliterated:latest loaded successfully
+2026-07-31 00:41:57 [INFO] xixi.llm: LLMEngine aiohttp session closed
+2026-07-31 00:41:57 [INFO] xixi.lifecycle: Model preloaded: Model richardyoung/qwen3.6-27b-abliterated:latest loaded
+2026-07-31 00:41:57 [INFO] xixi.lifecycle: === 西西 启动完成 ===
+2026-07-31 00:41:57 [INFO] xixi.main: Container started
+2026-07-31 00:41:57 [INFO] xixi.protocol: xixi/1.0 Protocol Server started on http://127.0.0.1:17861
+2026-07-31 00:42:00 [INFO] xixi.main: Health check: degraded
+2026-07-31 00:42:00 [INFO] xixi.ui.web: UI RC1 reports ready
+2026-07-31 00:42:38 [INFO] xixi.task: Task task_5d66037a started (weight=heavy)
+2026-07-31 00:42:38 [INFO] xixi.memory: Raw note saved: id=mem_a17db44402a6 role=user
+2026-07-31 01:25:36 [INFO] xixi.main: === 西西桌面伴侣 启动 ===
+2026-07-31 01:25:36 [INFO] xixi.task: Restored 1 tasks from database
+2026-07-31 01:25:36 [INFO] xixi.body: Body assets incomplete, using neutral placeholder
+2026-07-31 01:25:36 [INFO] xixi.soul: Soul package loaded from C:\Users\99678\Desktop\xixi_complete_integrated_repaired_1\supplements\soul\xixi_soul_rc1 (version 0.9.0-rc1)
+2026-07-31 01:25:36 [INFO] xixi.soul: Checksum verification passed for 34 files
+2026-07-31 01:25:36 [INFO] xixi.soul: Soul runtime validator initialized
+2026-07-31 01:25:36 [INFO] xixi.main: Soul loaded: xixi-soul-main v0.9.0-rc1
+2026-07-31 01:25:36 [INFO] xixi.ui.web: Loading UI RC1 from C:\Users\99678\Desktop\xixi_complete_integrated_repaired_1\ui_runtime\xixi_ui_rc1_integrated\index.html
+2026-07-31 01:25:37 [INFO] xixi.lifecycle: === 西西 启动开始 ===
+2026-07-31 01:25:37 [INFO] xixi.lifecycle: Backup created: C:\Users\99678\Desktop\xixi_complete_integrated_repaired_1\backups\backup_stable_20260730_172537
+2026-07-31 01:25:37 [INFO] xixi.lifecycle: Stable marker set: C:\Users\99678\Desktop\xixi_complete_integrated_repaired_1\backups\backup_stable_20260730_172537
+2026-07-31 01:25:49 [INFO] xixi.llm: Model richardyoung/qwen3.6-27b-abliterated:latest loaded successfully
+2026-07-31 01:25:49 [INFO] xixi.llm: LLMEngine aiohttp session closed
+2026-07-31 01:25:49 [INFO] xixi.lifecycle: Model preloaded: Model richardyoung/qwen3.6-27b-abliterated:latest loaded
+2026-07-31 01:25:49 [INFO] xixi.lifecycle: === 西西 启动完成 ===
+2026-07-31 01:25:49 [INFO] xixi.main: Container started
+2026-07-31 01:25:49 [INFO] xixi.protocol: xixi/1.0 Protocol Server started on http://127.0.0.1:17861
+2026-07-31 01:25:52 [INFO] xixi.main: Health check: degraded
+2026-07-31 01:25:53 [INFO] xixi.ui.web: UI RC1 reports ready
+2026-07-31 01:26:20 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send task.status
+2026-07-31 01:26:20 [INFO] xixi.task: Task task_6c9b2877 started (weight=heavy)
+2026-07-31 01:26:20 [INFO] xixi.memory: Raw note saved: id=mem_714c45ebfc28 role=user
+2026-07-31 01:26:20 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.start
+2026-07-31 01:26:20 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send task.status
+2026-07-31 01:26:25 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:25 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:25 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:25 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:25 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:25 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:25 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:25 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:25 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:25 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:26 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:26 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:26 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:26 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:26 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:26 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:26 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:26 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:26 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:26 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:26 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:26 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:26 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:26 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:26 [INFO] xixi.task: Task task_6c9b2877 completed
+2026-07-31 01:26:26 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send task.status
+2026-07-31 01:26:26 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.complete
+2026-07-31 01:26:26 [INFO] xixi.memory: Memory saved: id=mem_2aee5ff04fc8 space=working source=xixi_opinion
+2026-07-31 01:26:26 [INFO] xixi.llm: LLMEngine aiohttp session closed
+2026-07-31 01:26:35 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send task.status
+2026-07-31 01:26:35 [INFO] xixi.task: Task task_2059a540 started (weight=heavy)
+2026-07-31 01:26:35 [INFO] xixi.memory: Raw note saved: id=mem_2c96cd2e84e0 role=user
+2026-07-31 01:26:35 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.start
+2026-07-31 01:26:35 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send task.status
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:43 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:44 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:44 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:44 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:44 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:44 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:44 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:44 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:44 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:44 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:44 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:44 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:44 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:44 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:44 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:44 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:44 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:44 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:44 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:44 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:44 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:44 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:44 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:44 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:44 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:44 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:44 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:44 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:44 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:44 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:44 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:44 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:44 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.delta
+2026-07-31 01:26:44 [INFO] xixi.task: Task task_2059a540 completed
+2026-07-31 01:26:44 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send task.status
+2026-07-31 01:26:44 [WARNING] xixi.protocol: Session ses_2c342263 not found, cannot send assistant.stream.complete
+2026-07-31 01:26:44 [INFO] xixi.memory: Memory saved: id=mem_e11cfdc79c25 space=working source=xixi_opinion
+2026-07-31 01:26:44 [INFO] xixi.llm: LLMEngine aiohttp session closed
+2026-07-31 02:09:26 [INFO] xixi.main: === 西西桌面伴侣 启动 ===
+2026-07-31 02:09:27 [INFO] xixi.body: Body assets incomplete, using neutral placeholder
+2026-07-31 02:09:27 [INFO] xixi.soul: Soul package loaded from C:\Users\99678\Desktop\xixi_complete_integrated_repaired_1\supplements\soul\xixi_soul_rc1 (version 0.9.0-rc1)
+2026-07-31 02:09:27 [INFO] xixi.soul: Checksum verification passed for 34 files
+2026-07-31 02:09:27 [INFO] xixi.soul: Soul runtime validator initialized
+2026-07-31 02:09:27 [INFO] xixi.main: Soul loaded: xixi-soul-main v0.9.0-rc1
+2026-07-31 02:11:36 [INFO] xixi.main: === 西西桌面伴侣 启动 ===
+2026-07-31 02:11:36 [INFO] xixi.body: Body assets incomplete, using neutral placeholder
+2026-07-31 02:11:36 [INFO] xixi.soul: Soul package loaded from C:\Users\99678\Desktop\xixi_complete_integrated_repaired_1\supplements\soul\xixi_soul_rc1 (version 0.9.0-rc1)
+2026-07-31 02:11:36 [INFO] xixi.soul: Checksum verification passed for 34 files
+2026-07-31 02:11:36 [INFO] xixi.soul: Soul runtime validator initialized
+2026-07-31 02:11:36 [INFO] xixi.main: Soul loaded: xixi-soul-main v0.9.0-rc1
+2026-07-31 02:11:36 [INFO] xixi.ui.web: Loading UI RC1 from C:\Users\99678\Desktop\xixi_complete_integrated_repaired_1\ui_runtime\xixi_ui_rc1_integrated\index.html
+2026-07-31 02:11:36 [INFO] xixi.lifecycle: === 西西 启动开始 ===
+2026-07-31 02:11:36 [INFO] xixi.lifecycle: Backup created: C:\Users\99678\Desktop\xixi_complete_integrated_repaired_1\backups\backup_stable_20260730_181136
+2026-07-31 02:11:36 [INFO] xixi.lifecycle: Stable marker set: C:\Users\99678\Desktop\xixi_complete_integrated_repaired_1\backups\backup_stable_20260730_181136
+2026-07-31 02:11:49 [INFO] xixi.llm: Model richardyoung/qwen3.6-27b-abliterated:latest loaded successfully
+2026-07-31 02:11:49 [INFO] xixi.llm: LLMEngine aiohttp session closed
+2026-07-31 02:11:49 [INFO] xixi.lifecycle: Model preloaded: Model richardyoung/qwen3.6-27b-abliterated:latest loaded
+2026-07-31 02:11:49 [INFO] xixi.lifecycle: === 西西 启动完成 ===
+2026-07-31 02:11:49 [INFO] xixi.main: Container started
+2026-07-31 02:11:49 [INFO] xixi.protocol: xixi/1.0 Protocol Server started on http://127.0.0.1:17861
+2026-07-31 02:11:52 [INFO] xixi.main: Health check: degraded
+2026-07-31 02:11:53 [INFO] xixi.ui.web: UI RC1 reports ready
+2026-07-31 13:32:26 [INFO] xixi.main: === 西西桌面伴侣 启动 ===
+2026-07-31 13:32:27 [INFO] xixi.body: Body assets incomplete, using neutral placeholder
+2026-07-31 13:32:27 [INFO] xixi.soul: Soul package loaded from C:\Users\99678\Desktop\xixi_complete_integrated_repaired_1\supplements\soul\xixi_soul_rc1 (version 0.9.0-rc1)
+2026-07-31 13:32:27 [INFO] xixi.soul: Checksum verification passed for 34 files
+2026-07-31 13:32:27 [INFO] xixi.soul: Soul runtime validator initialized
+2026-07-31 13:32:27 [INFO] xixi.main: Soul loaded: xixi-soul-main v0.9.0-rc1
+2026-07-31 13:32:28 [INFO] xixi.ui.web: Loading UI RC1 from C:\Users\99678\Desktop\xixi_complete_integrated_repaired_1\ui_runtime\xixi_ui_rc1_integrated\index.html
+2026-07-31 13:32:28 [INFO] xixi.lifecycle: === 西西 启动开始 ===
+2026-07-31 13:32:28 [INFO] xixi.lifecycle: Backup created: C:\Users\99678\Desktop\xixi_complete_integrated_repaired_1\backups\backup_stable_20260731_053228
+2026-07-31 13:32:28 [INFO] xixi.lifecycle: Stable marker set: C:\Users\99678\Desktop\xixi_complete_integrated_repaired_1\backups\backup_stable_20260731_053228
+2026-07-31 13:32:42 [INFO] xixi.llm: Model richardyoung/qwen3.6-27b-abliterated:latest loaded successfully
+2026-07-31 13:32:42 [INFO] xixi.llm: LLMEngine aiohttp session closed
+2026-07-31 13:32:42 [INFO] xixi.lifecycle: Model preloaded: Model richardyoung/qwen3.6-27b-abliterated:latest loaded
+2026-07-31 13:32:42 [INFO] xixi.lifecycle: === 西西 启动完成 ===
+2026-07-31 13:32:42 [INFO] xixi.main: Container started
+2026-07-31 13:32:42 [INFO] xixi.protocol: xixi/1.0 Protocol Server started on http://127.0.0.1:17861
+2026-07-31 13:32:44 [INFO] xixi.main: Health check: degraded
+2026-07-31 13:32:45 [INFO] xixi.ui.web: UI RC1 reports ready
+2026-07-31 13:48:06 [INFO] xixi.main: === 西西桌面伴侣 启动 ===
+2026-07-31 13:48:06 [INFO] xixi.body: Body assets incomplete, using neutral placeholder
+2026-07-31 13:48:06 [INFO] xixi.soul: Soul package loaded from C:\Users\99678\Desktop\xixi_complete_integrated_repaired_1\supplements\soul\xixi_soul_rc1 (version 0.9.0-rc1)
+2026-07-31 13:48:06 [INFO] xixi.soul: Checksum verification passed for 34 files
+2026-07-31 13:48:06 [INFO] xixi.soul: Soul runtime validator initialized
+2026-07-31 13:48:06 [INFO] xixi.main: Soul loaded: xixi-soul-main v0.9.0-rc1
+2026-07-31 13:48:07 [INFO] xixi.ui.web: Loading UI RC1 from C:\Users\99678\Desktop\xixi_complete_integrated_repaired_1\ui_runtime\xixi_ui_rc1_integrated\index.html
+2026-07-31 13:48:07 [INFO] xixi.lifecycle: === 西西 启动开始 ===
+2026-07-31 13:48:08 [INFO] xixi.lifecycle: Backup created: C:\Users\99678\Desktop\xixi_complete_integrated_repaired_1\backups\backup_stable_20260731_054807
+2026-07-31 13:48:08 [INFO] xixi.lifecycle: Stable marker set: C:\Users\99678\Desktop\xixi_complete_integrated_repaired_1\backups\backup_stable_20260731_054807
+2026-07-31 13:48:08 [INFO] xixi.llm: Model richardyoung/qwen3.6-27b-abliterated:latest loaded successfully
+2026-07-31 13:48:08 [INFO] xixi.llm: LLMEngine aiohttp session closed
+2026-07-31 13:48:08 [INFO] xixi.lifecycle: Model preloaded: Model richardyoung/qwen3.6-27b-abliterated:latest loaded
+2026-07-31 13:48:08 [INFO] xixi.lifecycle: === 西西 启动完成 ===
+2026-07-31 13:48:08 [INFO] xixi.main: Container started
+2026-07-31 13:48:08 [INFO] xixi.protocol: xixi/1.0 Protocol Server started on http://127.0.0.1:17861
+2026-07-31 13:48:12 [INFO] xixi.main: Health check: degraded
+2026-07-31 13:48:12 [INFO] xixi.ui.web: UI RC1 reports ready

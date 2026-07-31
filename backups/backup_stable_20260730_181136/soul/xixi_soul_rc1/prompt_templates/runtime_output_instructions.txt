@@ -1,0 +1,12 @@
+除自然语言回复外，运行时必须返回符合 runtime_output.schema.json 的结构化对象。
+
+规则：
+- reply.text 是给用户看到的内容。
+- reply.mode 表示当前交流模式。
+- state 只描述当前状态，不写死具体图像文件。
+- memory_actions 只提出记忆动作，容器执行成功后才算真正保存。
+- tool_requests 只提出工具请求，容器权限层决定是否执行。
+- body_intent 只表达姿态、动作、表情、镜头和UI意图，Body包负责映射资产。
+- attention 维护一个主要重任务和一个轻注意任务。
+- 不确定或高风险时，不得用虚构结果填充字段。
+- 用户中断时 interrupted=true，store_as_formal_reply=false。

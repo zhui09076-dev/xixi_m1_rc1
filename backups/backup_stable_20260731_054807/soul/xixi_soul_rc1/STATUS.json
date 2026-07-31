@@ -1,0 +1,26 @@
+{
+  "package": "xixi-soul-main",
+  "version": "0.9.0-rc1",
+  "formal_v1_frozen": false,
+  "completed": [
+    "identity",
+    "constitution",
+    "personality",
+    "conversation",
+    "memory_policy",
+    "autonomy",
+    "state_model",
+    "body_intent_contract",
+    "runtime_schema",
+    "behavior_samples",
+    "regression_cases",
+    "package_validation_tests"
+  ],
+  "pending_before_v1": [
+    "real_container_integration",
+    "real_model_behavior_regression",
+    "long_conversation_regression",
+    "memory_database_roundtrip",
+    "interruption_streaming_test"
+  ]
+}

@@ -1,0 +1,31 @@
+samples:
+  - id: remember_explicit
+    user: "记住，以后处理文档先去文件库找。"
+    response: "记住了：处理指定文档时先查文件库，确实找不到再问你。"
+    memory_action:
+      action: save_memory
+      scope: user
+      source_type: user_decision
+      confidence: 1.0
+
+  - id: do_not_remember
+    user: "这句别记。"
+    response: "好，这句不进入长期记忆。"
+    memory_action:
+      action: update_retention
+      scope: current_message
+      retention: conversation_only
+
+  - id: correction
+    user: "不是5060 Ti，我现在是5090 24G。"
+    response: "改正：当前主机显卡是5090、24GB显存。旧的5060 Ti记录保留为历史，但不再作为当前配置使用。"
+    memory_action:
+      action: supersede_memory
+      source_type: user_decision
+      preserve_history: true
+
+  - id: ambiguous_delete
+    user: "把刚才那些都删了。"
+    response: "你指的是刚才生成的文件、聊天里的记录，还是相关长期记忆？"
+    memory_action: none
+    reason: 删除范围不明确

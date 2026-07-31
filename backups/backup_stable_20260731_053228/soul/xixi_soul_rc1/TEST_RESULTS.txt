@@ -1,0 +1,21 @@
+XiXi Soul RC1 clean-package verification
+Command: PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tests -v
+Result: PASS
+
+test_all_yaml_parses (test_package.SoulPackageTests.test_all_yaml_parses) ... ok
+test_identity_is_model_independent (test_package.SoulPackageTests.test_identity_is_model_independent) ... ok
+test_loader_and_checksums (test_package.SoulPackageTests.test_loader_and_checksums) ... ok
+test_manifest_entries_exist (test_package.SoulPackageTests.test_manifest_entries_exist) ... ok
+test_prompt_builder (test_package.SoulPackageTests.test_prompt_builder) ... ok
+test_regression_ids_unique (test_package.SoulPackageTests.test_regression_ids_unique) ... ok
+test_runtime_examples_validate (test_package.SoulPackageTests.test_runtime_examples_validate) ... ok
+test_single_active_identity_pointer_is_external (test_package.SoulPackageTests.test_single_active_identity_pointer_is_external) ... ok
+test_attention_is_cognitive_not_system_thread_limit (test_policy_invariants.PolicyInvariantTests.test_attention_is_cognitive_not_system_thread_limit) ... ok
+test_interruption_is_semantic (test_policy_invariants.PolicyInvariantTests.test_interruption_is_semantic) ... ok
+test_public_web_default_open_private_outbound_confirmed (test_policy_invariants.PolicyInvariantTests.test_public_web_default_open_private_outbound_confirmed) ... ok
+test_raw_memory_is_immutable (test_policy_invariants.PolicyInvariantTests.test_raw_memory_is_immutable) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.098s
+
+OK

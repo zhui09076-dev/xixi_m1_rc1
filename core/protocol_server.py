@@ -28,7 +28,6 @@ except ImportError:
 
 logger = logging.getLogger("xixi.protocol")
 
-
 # ── 错误码常量 ──
 class ErrorCode:
     PROTOCOL_VERSION_UNSUPPORTED = "XIXI_PROTOCOL_VERSION_UNSUPPORTED"
@@ -52,7 +51,6 @@ class ErrorCode:
     BODY_ASSET_MISSING = "XIXI_BODY_ASSET_MISSING"
     TASK_CONFLICT = "XIXI_TASK_CONFLICT"
     INTERNAL_ERROR = "XIXI_INTERNAL_ERROR"
-
 
 # ── 消息类型常量 ──
 class MsgType:
@@ -84,7 +82,6 @@ class MsgType:
     BODY_INTENT_SET = "body.intent.set"
     BODY_STATUS = "body.status"
 
-
 # 客户端可发送的消息类型
 CLIENT_MESSAGE_TYPES: Set[str] = {
     MsgType.SESSION_HELLO,
@@ -107,7 +104,6 @@ SERVER_TO_UI_TYPES: Set[str] = {
     MsgType.SYSTEM_ERROR,
 }
 
-
 @dataclass
 class SessionState:
     """WebSocket 会话状态"""
@@ -126,7 +122,6 @@ class SessionState:
         self.sequence_expected += 1
         self.last_activity = datetime.now(timezone.utc)
         return True
-
 
 class XixiEnvelope:
     """xixi/1.0 消息信封工具"""
@@ -170,7 +165,7 @@ class XixiEnvelope:
         返回: (is_valid, error_code, error_message)
         """
         # 基础字段存在性
-        required = ["protocol", "id", "type", "timestamp", "session_id", 
+        required = ["protocol", "id", "type", "timestamp", "session_id",
                     "trace_id", "source", "target", "sequence", "payload"]
         missing = [f for f in required if f not in data]
         if missing:
@@ -178,7 +173,7 @@ class XixiEnvelope:
 
         # 协议版本
         if data.get("protocol") != cls.PROTOCOL:
-            return False, ErrorCode.PROTOCOL_VERSION_UNSUPPORTED,                 f"Unsupported protocol: {data.get('protocol')}"
+            return False, ErrorCode.PROTOCOL_VERSION_UNSUPPORTED, f"Unsupported protocol: {data.get('protocol')}"
 
         # ID 格式
         msg_id = data.get("id", "")
@@ -195,7 +190,7 @@ class XixiEnvelope:
             MsgType.BODY_INTENT_SET, MsgType.BODY_STATUS,
         }
         if msg_type not in all_known_types:
-            return False, ErrorCode.UNSUPPORTED_MESSAGE_TYPE,                 f"Unknown message type: {msg_type}"
+            return False, ErrorCode.UNSUPPORTED_MESSAGE_TYPE, f"Unknown message type: {msg_type}"
 
         # source/target 合法性
         valid_entities = {"ui", "container", "soul", "body", "tool", "model", "system"}
@@ -241,7 +236,6 @@ class XixiEnvelope:
             },
             reply_to=reply_to,
         )
-
 
 class ProtocolServer:
     """
@@ -487,7 +481,8 @@ class ProtocolServer:
     ) -> bool:
         """发送消息到指定会话的 UI 客户端"""
         if session_id not in self.sessions:
-            logger.warning("Session %s not found, cannot send %s", session_id, msg_type)
+            # 本地 UI 通过 QWebChannel 直接通信，不经过 WebSocket，session 可能不存在
+            logger.debug("Session %s not in WebSocket sessions, skipping %s (local UI mode)", session_id, msg_type)
             return False
 
         session = self.sessions[session_id]
@@ -546,6 +541,11 @@ class ProtocolServer:
         """
         if self._loop is None or self._loop.is_closed():
             logger.error("Protocol server loop not running")
+            return False
+
+        # 本地 UI 模式：如果 session 不在 WebSocket 会话中，静默跳过（不报错）
+        if session_id not in self.sessions:
+            logger.debug("Session %s not connected via WebSocket, skipping %s (local UI mode)", session_id, msg_type)
             return False
 
         future = asyncio.run_coroutine_threadsafe(

@@ -1,0 +1,71 @@
+# 西西桌面伴侣 配置文件
+
+app:
+  name: "西西"
+  version: "0.1.0"
+  data_dir: "data"
+
+window:
+  width: 1920
+  height: 1080
+  fullscreen: true
+  borderless: true
+  always_on_bottom: true
+  transparent: true
+
+renderer:
+  type: "qt"
+  fps: 30
+  character_scale: 0.4
+
+# ── LLM 配置 ──
+llm:
+  base_url: "http://localhost:11434"
+  model: "richardyoung/qwen3.6-27b-abliterated:latest"
+  context_length: 65536      # 可配置，不硬编码 8192
+  temperature: 0.7
+  top_p: 0.9
+  timeout: 120.0
+  stream: true
+
+# ── Soul 配置 ──
+soul:
+  path: "supplements/soul/xixi_soul_rc1"
+  verify_checksums: true
+  auto_reload: false
+
+# ── 协议服务器配置 ──
+protocol:
+  host: "127.0.0.1"
+  port: 17861
+  heartbeat: 20
+  max_payload_size: 1048576   # 1 MiB
+
+# ── 数据库 ──
+database:
+  path: "data/xixi.db"
+  backup_interval: 3600
+
+# ── 语音（预留） ──
+voice:
+  enabled: false
+  tts_model: ""
+  asr_model: ""
+
+# ── 资产 ──
+assets:
+  path: "assets"
+  active_package: "default"
+
+# ── 行为 ──
+behavior:
+  greeting_on_start: true
+  idle_timeout: 300
+  proactive_interval: 600
+
+# ── 系统监控 ──
+monitor:
+  enabled: true
+  interval: 5
+  cpu_threshold: 80
+  memory_threshold: 80

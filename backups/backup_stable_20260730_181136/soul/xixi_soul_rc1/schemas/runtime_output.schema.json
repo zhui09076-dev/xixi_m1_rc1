@@ -1,0 +1,186 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "xixi://schemas/runtime_output.schema.json",
+  "title": "XiXi Soul Runtime Output",
+  "type": "object",
+  "required": [
+    "reply",
+    "state",
+    "memory_actions",
+    "tool_requests",
+    "body_intent",
+    "attention"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "reply": {
+      "type": "object",
+      "required": [
+        "text",
+        "mode",
+        "interrupted",
+        "store_as_formal_reply"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "mode": {
+          "enum": [
+            "companion",
+            "answer",
+            "advice",
+            "execution",
+            "correction",
+            "quiet"
+          ]
+        },
+        "interrupted": {
+          "type": "boolean"
+        },
+        "store_as_formal_reply": {
+          "type": "boolean"
+        }
+      }
+    },
+    "state": {
+      "type": "object",
+      "required": [
+        "base",
+        "substate",
+        "emotion",
+        "relationship_distance",
+        "initiative",
+        "reason"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "base": {
+          "enum": [
+            "sleeping",
+            "alone",
+            "working",
+            "thinking",
+            "waiting",
+            "accompanying",
+            "communicating",
+            "executing"
+          ]
+        },
+        "substate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "emotion": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "relationship_distance": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "initiative": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "reason": {
+          "type": "string"
+        }
+      }
+    },
+    "memory_actions": {
+      "type": "array",
+      "items": {
+        "$ref": "xixi://schemas/memory_action.schema.json"
+      }
+    },
+    "tool_requests": {
+      "type": "array",
+      "items": {
+        "$ref": "xixi://schemas/tool_request.schema.json"
+      }
+    },
+    "body_intent": {
+      "type": "object",
+      "required": [
+        "posture",
+        "motion",
+        "expression",
+        "camera",
+        "ui",
+        "intensity"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "posture": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "motion": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "expression": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "camera": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ui": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "intensity": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "attention": {
+      "type": "object",
+      "required": [
+        "primary_task_id",
+        "light_task_id",
+        "queue_new_heavy_task"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "primary_task_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "light_task_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "queue_new_heavy_task": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

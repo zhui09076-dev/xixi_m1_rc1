@@ -1,5 +1,4 @@
-"""
-西西桌面伴侣 - 主入口（最终版）
+"""西西桌面伴侣 - 主入口（最终版）
 集成: ProtocolServer, Soul, LLM, Memory, Permission, Tool, Body, Task, Lifecycle
 """
 from __future__ import annotations
@@ -45,7 +44,6 @@ from ui.web_main_window import WebMainWindow
 
 logger = logging.getLogger("xixi.main")
 
-
 class Container(QObject):
     """西西容器 - 完整版"""
 
@@ -72,7 +70,7 @@ class Container(QObject):
         # 子系统
         self.identity_mgr = IdentityManager(db)
         self.memory_mgr = MemoryManager(str(db.path))
-        self.permission_gw = PermissionGateway(str(db.path), authorized_paths=config.get("permissions.authorized_paths", None))
+        self.permission_gw = PermissionGateway(str(db.path))
         self.state_mgr = StateMachine()
         self.task_scheduler = TaskScheduler(str(db.path))
         self.system_monitor = SystemMonitor()
@@ -139,6 +137,11 @@ class Container(QObject):
         self.sig_stream_complete.connect(self._handle_stream_complete)
         self.sig_stream_interrupted.connect(self._handle_stream_interrupted)
         self.sig_permission_request.connect(self._handle_permission_request)
+        self.sig_system_error.connect(self._handle_system_error)
+        self.sig_ui_mode_set.connect(self._handle_ui_mode_set)
+        self.sig_model_status.connect(self._handle_model_status)
+        self.sig_task_status.connect(self._handle_task_status)
+        self.sig_body_intent.connect(self._handle_body_intent)
 
     def _load_soul(self) -> None:
         soul_path = self.config.get("soul.path", "supplements/soul/xixi_soul_rc1")
@@ -183,6 +186,16 @@ class Container(QObject):
     def health_check(self) -> Dict:
         return self.lifecycle.health_check(self)
 
+    # ── 公共接口（供 UI 调用）──
+    def get_current_session_id(self) -> Optional[str]:
+        return self._current_session_id
+
+    def get_current_trace_id(self) -> Optional[str]:
+        return self._current_trace_id
+
+    def is_generating(self) -> bool:
+        return self._is_generating
+
     # ── 任务状态同步 ──
     def _on_task_status_change(self, task) -> None:
         self.sig_task_status.emit(self._current_session_id or "system", task.to_dict())
@@ -222,7 +235,7 @@ class Container(QObject):
             target="conversation",
         )
 
-        # 自然语言控制必须先于默认保存，明确“不记”时不落库。
+        # 自然语言控制必须先于默认保存，明确"不记"时不落库。
         nl_result = self.memory_mgr.process_natural_language_command(user_text)
         if nl_result.get("action") == "skip_save":
             logger.info("User explicitly declined saving")
@@ -250,7 +263,7 @@ class Container(QObject):
         )
         gen_thread.start()
 
-    def _run_generation(self, session_id: str, trace_id: str, 
+    def _run_generation(self, session_id: str, trace_id: str,
                         messages: List[Dict], system: Optional[str], task_id: str) -> None:
         loop = asyncio.new_event_loop()
         asyncio.set_event_loop(loop)
@@ -345,8 +358,8 @@ class Container(QObject):
             intent = BodyIntent.from_dict(body_intent_data)
             result = self.body_interface.set_intent(intent)
             self.sig_body_intent.emit(result)
-            self.protocol.send_to_ui(session_id, MsgType.BODY_INTENT_SET, 
-                                     result.get("intent", {}), trace_id=trace_id)
+            self.protocol.send_to_ui(session_id, MsgType.BODY_INTENT_SET,
+                result.get("intent", {}), trace_id=trace_id)
 
         state = output.get("state", {})
         if state:
@@ -412,7 +425,7 @@ class Container(QObject):
                 target_id = action.get("target_id")
                 if target_id:
                     self.memory_mgr.purge_memory(target_id)
-            logger.info("Memory action: %s", action_type)
+                logger.info("Memory action: %s", action_type)
         except Exception as e:
             logger.error("Memory action failed: %s", e)
             self.protocol.send_to_ui(session_id, MsgType.SYSTEM_ERROR, {
@@ -451,19 +464,19 @@ class Container(QObject):
                     "session_id": session_id, "trace_id": trace_id,
                     "tool_req": tool_req, "task_id": tool_task.id,
                 }
-                details = self.permission_gw.get_permission_details(perm_id)
-                self.sig_permission_request.emit(session_id, trace_id, {
-                    "permission_id": perm_id,
-                    "operation": f"{capability}.{operation}",
-                    "target": target,
-                    "risk": risk.value,
-                    "reason": reason,
-                    "scope": input_data,
-                    "description": details.get("reason", "") if details else "",
-                })
+            details = self.permission_gw.get_permission_details(perm_id)
+            self.sig_permission_request.emit(session_id, trace_id, {
+                "permission_id": perm_id,
+                "operation": f"{capability}.{operation}",
+                "target": target,
+                "risk": risk.value,
+                "reason": reason,
+                "scope": input_data,
+                "description": details.get("reason", "") if details else "",
+            })
 
-    async def _do_execute_tool(self, session_id: str, trace_id: str,
-                               tool_req: dict, task_id: str, perm_id: Optional[str] = None) -> None:
+    def _do_execute_tool(self, session_id: str, trace_id: str,
+                         tool_req: dict, task_id: str, perm_id: Optional[str] = None) -> None:
         capability = tool_req.get("capability", "")
         operation = tool_req.get("operation", "")
         target = tool_req.get("target", "")
@@ -538,13 +551,9 @@ class Container(QObject):
         allowed = self.permission_gw.resolve_permission(perm_id, decision)
 
         if allowed:
-            loop = asyncio.new_event_loop()
-            try:
-                loop.run_until_complete(self._do_execute_tool(
-                    pending["session_id"], pending["trace_id"], tool_req, pending["task_id"], perm_id
-                ))
-            finally:
-                loop.close()
+            self._do_execute_tool(
+                pending["session_id"], pending["trace_id"], tool_req, pending["task_id"], perm_id
+            )
         else:
             self.task_scheduler.cancel_task(pending["task_id"])
             logger.info("Tool DENIED: %s.%s", tool_req.get("capability"), tool_req.get("operation"))
@@ -558,7 +567,7 @@ class Container(QObject):
         if not self.prompt_builder:
             return "你是西西。你是一个长期存在于用户Windows桌面中的本地数字人格。"
 
-        current_state = self.state_mgr.get_current_state()
+        current_state = self.state_mgr.to_dict()
         relevant_memory = self.memory_mgr.search_relevant(limit=10)
         recent_conversation = self.memory_mgr.get_recent_conversations(limit=10, as_messages=True)
         current_project = None
@@ -604,13 +613,27 @@ class Container(QObject):
     def _handle_permission_request(self, session_id: str, trace_id: str, payload: dict) -> None:
         self.protocol.send_to_ui(session_id, MsgType.PERMISSION_REQUEST, payload, trace_id=trace_id)
 
+    def _handle_system_error(self, session_id: str, payload: dict) -> None:
+        self.protocol.send_to_ui(session_id, MsgType.SYSTEM_ERROR, payload)
+
+    def _handle_ui_mode_set(self, session_id: str, mode: str) -> None:
+        self.protocol.send_to_ui(session_id, MsgType.UI_MODE_SET, {"mode": mode})
+
+    def _handle_model_status(self, session_id: str, payload: dict) -> None:
+        self.protocol.send_to_ui(session_id, MsgType.MODEL_STATUS, payload)
+
+    def _handle_task_status(self, session_id: str, payload: dict) -> None:
+        self.protocol.send_to_ui(session_id, MsgType.TASK_STATUS, payload)
+
+    def _handle_body_intent(self, payload: dict) -> None:
+        logger.debug("Body intent: %s", payload)
+
     def _send_model_status(self, session_id: str) -> None:
         self.protocol.send_to_ui(session_id, MsgType.MODEL_STATUS, {
             "model": self.llm.config.model,
             "status": "ready" if self.soul else "degraded",
             "soul_version": self.soul.version if self.soul else None,
         })
-
 
 def main():
     setup_logging()
@@ -651,7 +674,6 @@ def main():
     logger.info("Health check: %s", health.get("status", "unknown"))
 
     sys.exit(app.exec())
-
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,73 @@
+conversation:
+  version: 1.0.0
+
+  principles:
+    natural_continuity: true
+    multi_intent_allowed: true
+    interruptible: true
+    silence_allowed: true
+    ordinary_chat_need_not_become_task: true
+    low_confidence_high_risk_action_forbidden: true
+
+  semantic_intents:
+    - expression
+    - understanding
+    - question
+    - advice
+    - decision
+    - instruction
+    - correction
+    - interruption
+    - memory_control
+    - tool_request
+
+  interpretation:
+    primary_and_secondary_intents: true
+    rules:
+      - 一句话可以包含多个意图
+      - 普通聊天不强制硬分类
+      - 涉及执行、记忆写入、删除或外部工具时再形成结构化动作
+      - 低置信度时先回应或澄清
+      - 用户正在纠正方向时优先停止当前路线
+
+  interruption:
+    semantic_principle: 判断用户是否要求停止当前生成或任务，不按单个字面词机械触发
+    strong_examples:
+      - 停下
+      - 不要继续
+      - 先别说了
+      - 取消生成
+      - 中断当前任务
+      - 你在干嘛，停
+    non_examples:
+      - 我家停电了
+      - 这个项目停了一周
+      - 停车场在哪里
+    required_behavior:
+      - 立即停止继续生成
+      - 停止说话和口型动作
+      - 不自动补完残缺内容
+      - 残缺回复不进入正式记忆
+      - 保留可恢复的任务状态
+
+  response_modes:
+    companion:
+      purpose: 陪伴、理解和自然交流
+    answer:
+      purpose: 直接回答问题
+    advice:
+      purpose: 给出判断、理由、风险和选择
+    execution:
+      purpose: 进入任务、文件或工具流程
+    correction:
+      purpose: 修正理解、记忆或项目方向
+    quiet:
+      purpose: 减少主动表达，仅保留必要提醒
+
+  correction_behavior:
+    when_user_says_direction_is_wrong:
+      - 先停止错误路线
+      - 明确指出具体误解
+      - 不继续为旧方案辩护
+      - 重新确认当前目标
+      - 只执行修正后的下一步

@@ -1,0 +1,57 @@
+states:
+  version: 1.0.0
+  extensible: true
+
+  base_semantic_states:
+    sleeping:
+      meaning: 睡眠或深度静默
+    alone:
+      meaning: 清醒独处
+    working:
+      meaning: 执行主要认知工作
+      substates:
+        - writing
+        - coding
+        - researching
+        - organizing
+    thinking:
+      meaning: 分析、推演或形成判断
+    waiting:
+      meaning: 等待用户、工具或外部条件
+    accompanying:
+      meaning: 安静陪伴
+    communicating:
+      meaning: 与用户交流
+    executing:
+      meaning: 调用工具或完成现实任务
+
+  dimensions:
+    emotion:
+      open_vocabulary: true
+      examples:
+        - peaceful
+        - focused
+        - curious
+        - amused
+        - concerned
+    relationship_distance:
+      type: float
+      range: [0.0, 1.0]
+      default: 0.55
+    initiative:
+      type: float
+      range: [0.0, 1.0]
+      default: 0.5
+    attention:
+      fields:
+        - primary_task_id
+        - attended_light_task_id
+        - focus_level
+
+  startup_modes:
+    reconnect:
+      rule: 短时重启或睡眠唤醒时尽量恢复当前上下文
+    restore:
+      rule: 正常开机时恢复上次稳定状态
+    cold_start:
+      rule: 首次启动、数据缺失或恢复失败时进入安全默认状态

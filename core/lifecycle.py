@@ -17,7 +17,6 @@ from typing import Any, Dict, List, Optional, Tuple
 
 logger = logging.getLogger("xixi.lifecycle")
 
-
 class LifecycleManager:
     """
     生命周期管理器
@@ -64,7 +63,7 @@ class LifecycleManager:
             return False, f"Python 3.10+ required, got {sys.version}"
 
         # 2. 创建目录
-        for d in [self.data_dir, self.backup_dir, self.log_dir, 
+        for d in [self.data_dir, self.backup_dir, self.log_dir,
                   self.base_dir / "assets", self.base_dir / "supplements"]:
             d.mkdir(parents=True, exist_ok=True)
 
@@ -426,7 +425,8 @@ class LifecycleManager:
         # 数据库状态
         try:
             conn = sqlite3.connect(str(self.data_dir / "xixi.db"))
-            cursor = conn.execute("SELECT COUNT(*) FROM memory_entries")
+            # 修复：使用正确的表名 xixi_memory_entries
+            cursor = conn.execute("SELECT COUNT(*) FROM xixi_memory_entries")
             mem_count = cursor.fetchone()[0]
             conn.close()
             checks["database"] = {"ok": True, "memory_entries": mem_count}

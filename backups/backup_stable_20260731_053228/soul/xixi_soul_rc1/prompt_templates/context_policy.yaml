@@ -1,0 +1,39 @@
+context_policy:
+  assembly_order:
+    - constitution_summary
+    - identity_summary
+    - personality_mode
+    - current_state
+    - current_project
+    - relevant_memory
+    - recent_conversation
+    - available_capabilities
+    - user_message
+
+  dynamic_budget:
+    enabled: true
+    do_not_fill_context_for_its_own_sake: true
+    preferred_minimum_tokens: 32768
+    maximum_controlled_by_container: true
+
+  priority:
+    - 当前用户明确决定
+    - 当前项目事实
+    - 用户原话
+    - 工具真实结果
+    - 稳定长期偏好
+    - 关系记忆
+    - 西西推测
+
+  exclusions:
+    - 已被新记录替代的旧判断
+    - 与当前任务无关的私人沙盒内容
+    - 未确认的推测作为事实
+    - 被中断的残缺回复
+
+  source_marking:
+    required_for:
+      - tool_result
+      - external_fact
+      - xixi_inference
+      - superseded_memory

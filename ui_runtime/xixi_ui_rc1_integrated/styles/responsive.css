@@ -2,7 +2,7 @@
   .status-chip { left: 40px; top: 32px; }
   .rail { left: 34px; top: 250px; width: 60px; }
   .rail.is-expanded { width: 190px; }
-  .app-library { left: 112px; top: 240px; width: 390px; }
+  .app-library { left: 240px; top: 240px; width: 420px; }
   .main-panel { right: 36px; width: 480px; height: min(780px, calc(100vh - 130px)); }
   .composer { width: min(760px, calc(100vw - 400px)); bottom: 32px; }
 }
@@ -11,7 +11,7 @@
   .status-chip { left: 46px; }
   .rail { left: 38px; width: 62px; }
   .rail.is-expanded { width: 198px; }
-  .app-library { left: 122px; width: 420px; }
+  .app-library { left: 250px; width: 440px; }
   .main-panel { right: 42px; width: 520px; height: min(800px, calc(100vh - 130px)); }
   .composer { width: min(860px, calc(100vw - 600px)); }
 }

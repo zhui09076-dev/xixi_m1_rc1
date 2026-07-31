@@ -1,8 +1,8 @@
-@echo off
+﻿@echo off
 chcp 65001 >nul
 cd /d "%~dp0.."
 echo ==========================================
-echo   西西桌面伴侣 - 一键停止
+echo 西西桌面伴侣 - 一键停止
 echo ==========================================
 echo.
 
@@ -12,10 +12,11 @@ if not exist data\xixi.pid (
 )
 
 set /p XIXI_PID=<data\xixi.pid
-echo [停止] 正在关闭西西 PID %XIXI_PID%...
-taskkill /PID %XIXI_PID% >nul 2>&1
+tasklist /FI "PID eq %XIXI_PID%" 2>nul | find /I "%XIXI_PID%" >nul
 if errorlevel 1 (
-    echo [警告] 正常关闭未成功，尝试强制停止该 PID。
+    echo [提示] 进程已不存在。
+) else (
+    echo [停止] 正在关闭进程 PID=%XIXI_PID%...
     taskkill /F /PID %XIXI_PID% >nul 2>&1
 )
 del /q data\xixi.pid >nul 2>&1
@@ -26,6 +27,6 @@ curl -s -X POST http://localhost:11434/api/generate -H "Content-Type: applicatio
 
 echo.
 echo ==========================================
-echo   已停止
+echo 已停止
 echo ==========================================
 pause

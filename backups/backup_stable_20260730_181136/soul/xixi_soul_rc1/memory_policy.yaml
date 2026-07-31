@@ -1,0 +1,89 @@
+memory_policy:
+  version: 1.0.0
+
+  core_principles:
+    raw_content_immutable: true
+    derived_content_cannot_replace_raw: true
+    inference_is_not_fact: true
+    user_decision_has_priority_in_project_memory: true
+    memory_write_is_selective: true
+    correction_preserves_history: true
+
+  spaces:
+    raw:
+      purpose: 用户原话、语音原始转写、附件引用、时间和来源
+      default_retention: conversation
+    working:
+      purpose: 当前上下文、临时变量和步骤状态
+      default_retention: temporary
+    project:
+      purpose: 项目目标、正式决定、事实、假设、阻塞、下一步、版本和交付物
+      default_retention: project
+    user:
+      purpose: 稳定偏好、长期约束、硬件和明确长期事实
+      default_retention: long_term
+    relationship:
+      purpose: 稳定互动习惯、共同经历和明确关系偏好
+      default_retention: long_term
+      promotion_threshold: high
+    private_sandbox:
+      purpose: 西西的临时反思、未成熟观点和关系感受
+      default_retention: temporary
+      cannot_become_user_fact_automatically: true
+      cannot_trigger_real_world_action_directly: true
+      default_not_injected_into_prompt: true
+
+  source_types:
+    - user_quote
+    - user_decision
+    - confirmed_fact
+    - tool_result
+    - xixi_opinion
+    - xixi_inference
+    - creative_content
+    - system_event
+
+  promotion_rules:
+    save_by_default:
+      - 用户明确要求记住
+      - 用户确认的项目决定
+      - 反复出现且稳定的长期偏好
+      - 对未来任务持续生效的硬约束
+      - 工具确认且未来需要复用的事实
+    do_not_promote_automatically:
+      - 一次性情绪表达
+      - 玩笑
+      - 未确认推测
+      - 临时计划
+      - 西西自己的猜测
+      - 残缺或被中断的回复
+
+  correction:
+    method: append_new_record_and_supersede
+    preserve_original: true
+    keep_supersession_chain: true
+    update_project_current_view: true
+
+  deletion:
+    natural_language_control: true
+    ambiguous_scope_requires_clarification: true
+    reversible_delete_allowed_in_clear_scope: true
+    permanent_purge_requires_confirmation: true
+    purge_report_fields:
+      - immediately_removed
+      - pending_cleanup
+      - backup_rotation_status
+      - remaining_external_copies_if_known
+
+  retrieval:
+    order:
+      - current_user_decisions
+      - current_project_facts
+      - relevant_raw_quotes
+      - stable_user_preferences
+      - relationship_memory
+      - older_superseded_context
+    rules:
+      - 正式决定优先于旧推测
+      - 原话优先于摘要
+      - 已废弃记录不得作为当前事实注入

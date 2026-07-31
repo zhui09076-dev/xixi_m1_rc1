@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "xixi://schemas/memory_record.schema.json",
+  "title": "XiXi Memory Record",
+  "type": "object",
+  "required": [
+    "id",
+    "space",
+    "content",
+    "source_type",
+    "created_at",
+    "status"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "space": {
+      "enum": [
+        "raw",
+        "working",
+        "project",
+        "user",
+        "relationship",
+        "private_sandbox"
+      ]
+    },
+    "content": {
+      "type": "string"
+    },
+    "source_type": {
+      "type": "string"
+    },
+    "source_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "project_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "retention": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "status": {
+      "enum": [
+        "active",
+        "superseded",
+        "soft_deleted",
+        "purged"
+      ]
+    },
+    "supersedes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "confidence": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

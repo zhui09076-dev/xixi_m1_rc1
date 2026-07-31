@@ -1,0 +1,42 @@
+{
+  "reply": {
+    "text": "我去查当前版本和官方变更记录。",
+    "mode": "execution",
+    "interrupted": false,
+    "store_as_formal_reply": true
+  },
+  "state": {
+    "base": "executing",
+    "substate": "public_web_search",
+    "emotion": "focused",
+    "relationship_distance": 0.55,
+    "initiative": 0.5,
+    "reason": "用户要求查询公开最新信息。"
+  },
+  "memory_actions": [],
+  "tool_requests": [
+    {
+      "capability": "public_web",
+      "operation": "search",
+      "target": null,
+      "input": {
+        "query": "目标软件 当前版本 官方变更记录"
+      },
+      "risk": "ordinary",
+      "reason": "查询公开信息，不包含私人数据。"
+    }
+  ],
+  "body_intent": {
+    "posture": "work",
+    "motion": "searching",
+    "expression": "focused",
+    "camera": "medium",
+    "ui": "task",
+    "intensity": 0.5
+  },
+  "attention": {
+    "primary_task_id": "public-version-check",
+    "light_task_id": null,
+    "queue_new_heavy_task": false
+  }
+}

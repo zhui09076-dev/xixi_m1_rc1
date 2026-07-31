@@ -17,6 +17,30 @@ DEFAULT_CONFIG = {
         "scale": 1.0,
         "layers": ["background", "character", "foreground", "lighting"],
     },
+    "llm": {
+        "base_url": "http://localhost:11434",
+        "model": "richardyoung/qwen3.6-27b-abliterated:latest",
+        "context_length": 65536,
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "timeout": 120.0,
+        "stream": True,
+    },
+    "protocol": {
+        "host": "127.0.0.1",
+        "port": 17861,
+        "heartbeat": 20,
+        "max_payload_size": 1048576,
+    },
+    "soul": {
+        "path": "supplements/soul/xixi_soul_rc1",
+        "verify_checksums": True,
+        "auto_reload": False,
+    },
+    "database": {
+        "path": "data/xixi.db",
+        "backup_interval": 3600,
+    },
     "ollama": {
         "host": "http://localhost:11434",
         "model": "richardyoung/qwen3.6-27b-abliterated:latest",
@@ -45,9 +69,6 @@ DEFAULT_CONFIG = {
         "idle_timeout": 300,
         "max_chat_history": 50,
     },
-    "database": {
-        "path": "data/xixi.db",
-    },
     "permissions": {
         "public_web_read_default": True,
         "authorized_paths": [
@@ -60,7 +81,6 @@ DEFAULT_CONFIG = {
     "extensions_dir": "extensions",
     "development_dir": "development",
 }
-
 
 class Config:
     """配置对象，支持 dict-like 访问和属性访问"""
@@ -103,7 +123,6 @@ class Config:
     def save(self, path: str = "config.yaml"):
         with open(path, "w", encoding="utf-8") as f:
             yaml.dump(self._data, f, allow_unicode=True, sort_keys=False)
-
 
 def _deep_merge(base: dict, override: dict) -> dict:
     result = dict(base)

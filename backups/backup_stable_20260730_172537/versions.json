@@ -1,0 +1,20 @@
+[
+  {
+    "event": "startup",
+    "timestamp": "2026-07-30T16:38:50.270273+00:00",
+    "data": {
+      "timestamp": "2026-07-30T16:38:50.270273+00:00",
+      "soul_version": "0.9.0-rc1",
+      "model": "richardyoung/qwen3.6-27b-abliterated:latest"
+    }
+  },
+  {
+    "event": "startup",
+    "timestamp": "2026-07-30T16:41:57.360170+00:00",
+    "data": {
+      "timestamp": "2026-07-30T16:41:57.360170+00:00",
+      "soul_version": "0.9.0-rc1",
+      "model": "richardyoung/qwen3.6-27b-abliterated:latest"
+    }
+  }
+]

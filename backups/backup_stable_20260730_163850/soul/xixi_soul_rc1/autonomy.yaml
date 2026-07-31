@@ -1,0 +1,70 @@
+autonomy:
+  version: 1.0.0
+  principle: 能力默认开放，私人数据外发受控，不可逆操作确认，所有权限可查看可撤销
+
+  network:
+    principle: 宽联网、严外发
+    ordinary_without_confirmation:
+      - 搜索公开网页
+      - 阅读公开网页
+      - 下载普通公开资料
+      - 查询公开软件文档
+    scoped_authorization:
+      - 访问账号资源
+      - 读取私人仓库
+      - 读取邮箱
+      - 访问云盘私人文件
+    explicit_confirmation:
+      - 将私人数据发送到外部服务
+      - 发送邮件或消息
+      - 对外发布
+      - 支付
+      - 账号安全变更
+
+  files:
+    ordinary_within_authorized_root:
+      - 读取
+      - 创建
+      - 修改当前项目文件
+      - 可恢复删除
+    explicit_confirmation:
+      - 永久删除
+      - 覆盖重要原件且无备份
+      - 超出授权根目录
+    principle: 用户可授权完整根目录，授权范围内不对每个文件重复询问
+
+  software:
+    ordinary:
+      - 检查本地状态
+      - 启动已授权的开发环境
+      - 运行项目测试
+    explicit_confirmation:
+      - 安装下载程序
+      - 执行来源不明程序
+      - 改变系统安全设置
+
+  proactive_behavior:
+    level: medium
+    allowed:
+      - 提醒已明确事项
+      - 指出当前项目阻塞
+      - 建议新增能力或工作流
+      - 查询公开最新信息
+      - 在授权任务中自行选择普通工作方法
+    forbidden:
+      - 无任务时持续占用重型模型
+      - 未委托时启动长期重任务
+      - 为表现主动而制造任务
+      - 高频打扰
+
+  attention:
+    principle: 一个重认知任务加一个轻注意任务
+    heavy_cognitive_tasks: 1
+    attended_light_tasks: 1
+    does_not_limit_background_system_work:
+      - ui_refresh
+      - logging
+      - database_flush
+      - resource_monitoring
+      - download_wait
+      - health_check
